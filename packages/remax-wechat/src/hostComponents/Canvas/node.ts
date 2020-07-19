@@ -1,10 +1,11 @@
 export const alias = {
   id: 'id',
   style: 'style',
+  animation: 'animation',
   className: 'class',
   width: 'width',
   height: 'height',
-  disableCcroll: 'disable-scroll',
+  disableScroll: 'disable-scroll',
   type: 'type',
   canvasId: 'canvas-id',
   onTouchStart: 'bindtouchstart',
@@ -16,7 +17,6 @@ export const alias = {
   onTap: 'bindtap',
   onClick: 'bindtap',
   onError: 'binderror',
-  animation: 'animation',
 };
 
 export const props = Object.values(alias);

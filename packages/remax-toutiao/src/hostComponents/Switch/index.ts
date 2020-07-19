@@ -1,8 +1,9 @@
-import createHostComponent from '../../createHostComponent';
+import { createHostComponent } from '@remax/shared';
 
 import { BaseProps } from '../../types/component';
 
 export interface SwitchProps extends BaseProps {
+  name?: string;
   checked?: boolean;
   disabled?: boolean;
   type?: string;
@@ -10,4 +11,11 @@ export interface SwitchProps extends BaseProps {
   color?: string;
 }
 
-export default createHostComponent<SwitchProps>('switch');
+export const Switch = createHostComponent<SwitchProps>('switch');
+
+Switch.defaultProps = {
+  checked: false,
+  disabled: false,
+  type: 'switch',
+  color: '#F85959',
+};

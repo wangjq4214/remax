@@ -1,8 +1,9 @@
-import createHostComponent from '../../createHostComponent';
+import { createHostComponent } from '@remax/shared';
 
 import { BaseProps } from '../../types/component';
 
 export interface TextareaProps extends BaseProps {
+  name?: string;
   value?: string;
   placeholder?: string;
   placeholderStyle?: string;
@@ -21,4 +22,16 @@ export interface TextareaProps extends BaseProps {
   onConfirm?: (e: any) => void;
 }
 
-export default createHostComponent<TextareaProps>('textarea');
+export const Textarea = createHostComponent<TextareaProps>('textarea');
+
+Textarea.defaultProps = {
+  disabled: false,
+  maxlength: 140,
+  focus: false,
+  autoHeight: false,
+  fixed: false,
+  cursorSpacing: 0,
+  cursor: -1,
+  selectionStart: -1,
+  selectionEnd: -1,
+};

@@ -1,4 +1,4 @@
-import createHostComponent from '../../createHostComponent';
+import { createHostComponent } from '@remax/shared';
 import { BaseProps } from '../../types/component';
 
 export interface TextProps extends BaseProps {
@@ -17,4 +17,12 @@ export interface TextProps extends BaseProps {
   decode?: boolean;
 }
 
-export default createHostComponent<TextProps>('text');
+/**
+ * https://developers.weixin.qq.com/miniprogram/dev/component/text.html
+ */
+export const Text = createHostComponent<TextProps>('text');
+
+Text.defaultProps = {
+  selectable: false,
+  decode: false,
+};

@@ -1,6 +1,7 @@
 {
   "packages": [
     "packages/*",
+    "e2e/*",
     "website"
   ],
   "command": {
@@ -8,6 +9,7 @@
       "conventionalCommits": true
     }
   },
-  "version": "1.11.3",
-  "npmClient": "yarn"
+  "version": "2.7.3",
+  "npmClient": "yarn",
+  "useWorkspaces": true
 }

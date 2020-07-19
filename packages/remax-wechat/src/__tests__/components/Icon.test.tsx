@@ -1,12 +1,10 @@
 import * as React from 'react';
 import TestRenderer from 'react-test-renderer';
-import Icon from '../../hostComponents/Icon';
+import { Icon } from '../../hostComponents';
 
 describe('Icon', () => {
   it('render correctly', () => {
-    const testRenderer = TestRenderer.create(
-      <Icon className="class" type="info" />
-    );
+    const testRenderer = TestRenderer.create(<Icon className="class" type="info" />);
 
     expect(testRenderer.toJSON()).toMatchSnapshot();
   });

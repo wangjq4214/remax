@@ -1,4 +1,4 @@
-import createHostComponent from '../../createHostComponent';
+import { createHostComponent } from '@remax/shared';
 import { BaseProps } from '../../types/component';
 
 export interface MovableAreaProps extends BaseProps {
@@ -6,4 +6,11 @@ export interface MovableAreaProps extends BaseProps {
   scaleArea?: boolean;
 }
 
-export default createHostComponent<MovableAreaProps>('movable-area');
+/**
+ * https://developers.weixin.qq.com/miniprogram/dev/component/movable-area.html
+ */
+export const MovableArea = createHostComponent<MovableAreaProps>('movable-area');
+
+MovableArea.defaultProps = {
+  scaleArea: false,
+};

@@ -1,4 +1,4 @@
-import createHostComponent from '../../createHostComponent';
+import { createHostComponent } from '@remax/shared';
 
 import { BaseProps } from '../../types/component';
 
@@ -7,14 +7,25 @@ export interface ButtonProps extends BaseProps {
   type?: 'primary' | 'default';
   disabled?: boolean;
   loading?: boolean;
-  hoverClass?: string;
+  hoverClassName?: string;
   hoverStartTime?: number;
   hoverStayTime?: number;
   hoverStopPropagation?: boolean;
   formType?: 'submit' | 'reset';
   openType?: 'share' | 'getPhoneNumber';
   onClick?: (e: any) => void;
-  onGetphonenumber?: (e: any) => void;
+  onGetPhoneNumber?: (e: any) => void;
 }
 
-export default createHostComponent<ButtonProps>('button');
+export const Button = createHostComponent<ButtonProps>('button');
+
+Button.defaultProps = {
+  size: 'default',
+  type: 'default',
+  disabled: false,
+  loading: false,
+  hoverClassName: 'button-hover',
+  hoverStartTime: 20,
+  hoverStayTime: 70,
+  hoverStopPropagation: false,
+};

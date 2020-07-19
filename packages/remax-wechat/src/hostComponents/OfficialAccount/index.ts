@@ -1,4 +1,4 @@
-import createHostComponent from '../../createHostComponent';
+import { createHostComponent } from '@remax/shared';
 import { BaseProps } from '../../types/component';
 
 export interface OfficialAccountProps extends BaseProps {
@@ -8,4 +8,7 @@ export interface OfficialAccountProps extends BaseProps {
   onError?: (event: any) => any;
 }
 
-export default createHostComponent<OfficialAccountProps>('official-account');
+/**
+ * https://developers.weixin.qq.com/miniprogram/dev/component/official-account.html
+ */
+export const OfficialAccount = createHostComponent<OfficialAccountProps>('official-account');

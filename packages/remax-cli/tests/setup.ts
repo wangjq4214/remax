@@ -5,8 +5,8 @@ import * as sander from 'sander';
 import readdir from 'fs-readdir-recursive';
 import diff from 'jest-diff';
 import { sortBy } from 'lodash';
-import slash from 'slash2';
 import * as eol from 'eol';
+import { slash } from '@remax/shared';
 
 type Received = Array<{
   fileName: string;
@@ -14,7 +14,13 @@ type Received = Array<{
 }>;
 
 function buildText(files: Received) {
-  return sortBy(files, ['fileName'])
+  return sortBy(
+    files.map(f => ({
+      ...f,
+      fileName: slash(f.fileName),
+    })),
+    ['fileName']
+  )
     .reduce((acc: string[], f) => {
       acc.push(
         `file: ${f.fileName}`,
@@ -45,10 +51,8 @@ expect.extend({
     if (fs.existsSync(output)) {
       const expected = buildText(
         readdir(output).map(fileName => ({
-          fileName: slash(fileName),
-          code: eol.lf(
-            sander.readFileSync(path.join(output, fileName)).toString()
-          ),
+          fileName: fileName,
+          code: eol.lf(sander.readFileSync(path.join(output, fileName)).toString()),
         }))
       );
 
@@ -63,10 +67,7 @@ expect.extend({
 
           return {
             pass: true,
-            message: () =>
-              `Expected received content ${chalk.red(
-                'to not match'
-              )} the output ${chalk.blue(output)}.`,
+            message: () => `Expected received content ${chalk.red('to not match')} the output ${chalk.blue(output)}.`,
           };
         }
       } else {
@@ -88,9 +89,7 @@ expect.extend({
             return {
               pass: false,
               message: () =>
-                `Received content ${chalk.red(
-                  "doesn't match"
-                )} the output ${output}.\n\n${diff(
+                `Received content ${chalk.red("doesn't match")} the output ${output}.\n\n${diff(
                   expected,
                   actual,
                   options.diff
@@ -100,11 +99,7 @@ expect.extend({
         }
       }
     } else {
-      if (
-        !isNot &&
-        (snapshotState._updateSnapshot === 'new' ||
-          snapshotState._updateSnapshot === 'all')
-      ) {
+      if (!isNot && (snapshotState._updateSnapshot === 'new' || snapshotState._updateSnapshot === 'all')) {
         received.forEach(file => {
           sander.writeFileSync(path.join(output, file.fileName), file.code);
         });
@@ -116,10 +111,7 @@ expect.extend({
 
         return {
           pass: true,
-          message: () =>
-            `The output file ${chalk.blue(output)} ${chalk.bold.red(
-              "doesn't exist"
-            )}.`,
+          message: () => `The output file ${chalk.blue(output)} ${chalk.bold.red("doesn't exist")}.`,
         };
       }
     }

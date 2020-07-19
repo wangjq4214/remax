@@ -2,6 +2,7 @@ export const alias = {
   id: 'id',
   className: 'class',
   style: 'style',
+  animation: 'animation',
   src: 'src',
   mode: 'mode',
   autoplay: 'autoplay',
@@ -14,11 +15,13 @@ export const alias = {
   soundMode: 'sound-mode',
   autoPauseIfNavigate: 'auto-pause-if-navigate',
   autoPauseIfOpenNative: 'auto-pause-if-open-native',
+  pictureInPictureMode: 'picture-in-picture-mode',
   onStateChange: 'bindstatechange',
   onFullscreenChange: 'bindfullscreenchange',
-  onFullScreenChange: 'bindfullscreenchange',
-  onNetstatus: 'bindnetstatus',
-  animation: 'animation',
+  onNetStatus: 'bindnetstatus',
+  onAudioVolumeNotify: 'bindaudiovolumenotify',
+  onEnterPictureInPicture: 'bindenterpictureinpicture',
+  onLeavePictureInPicture: 'bindleavepictureinpicture',
 };
 
 export const props = Object.values(alias);

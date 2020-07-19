@@ -3,6 +3,624 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.7.3](https://github.com/remaxjs/remax/compare/v2.7.2...v2.7.3) (2020-07-17)
+
+### Bug Fixes
+
+- **ali:** 修复 Text 组件的 decode 属性不生效的问题 ([#1167](https://github.com/remaxjs/remax/issues/1167)) ([a9e9bff](https://github.com/remaxjs/remax/commit/a9e9bffdce51f15054a05e0f1400307f7db5d428))
+
+## [2.7.2](https://github.com/remaxjs/remax/compare/v2.7.1...v2.7.2) (2020-07-16)
+
+### Bug Fixes
+
+- 修复 babel.config.js 中配置的插件会执行两次的问题 ([#1164](https://github.com/remaxjs/remax/issues/1164)) ([a308524](https://github.com/remaxjs/remax/commit/a30852432603cd99138ef41c48bea372659b0014))
+- 修复 turboPages 模式使用 Fragment 可能死循环的问题 ([#1161](https://github.com/remaxjs/remax/issues/1161)) ([ee897e8](https://github.com/remaxjs/remax/commit/ee897e856fc83b61cd5c24aee5f65b14d84e14bb))
+
+## [2.7.1](https://github.com/remaxjs/remax/compare/v2.7.0...v2.7.1) (2020-07-14)
+
+### Bug Fixes
+
+- **ali:** 修复 Button onError 属性不生效的问题 ([2464c90](https://github.com/remaxjs/remax/commit/2464c905df1d79fde795709d0abe04359c9a180c))
+
+# [2.7.0](https://github.com/remaxjs/remax/compare/v2.6.0...v2.7.0) (2020-07-09)
+
+### Bug Fixes
+
+- 修复 devServer 配置无法定制的问题 ([f856852](https://github.com/remaxjs/remax/commit/f8568522267a224a6a0cf04bede1a79bd629b86b)), closes [#1116](https://github.com/remaxjs/remax/issues/1116)
+- 修复 externals 配置可能被覆盖的问题 ([2dbc4a8](https://github.com/remaxjs/remax/commit/2dbc4a8854d2b4b366b02b5b8e46af7281a836e1))
+- **ali:** 修复 Video 组件 style, posterSize 属性不生效的问题 ([4120ea8](https://github.com/remaxjs/remax/commit/4120ea8e612988e20efc108c7869e1c2ffe256c4))
+- **wechat:** view 支持 catchTouchMove 事件 ([#1105](https://github.com/remaxjs/remax/issues/1105)) ([901cc2d](https://github.com/remaxjs/remax/commit/901cc2d63396d373d35c2bdd17fecccb81f94703))
+- 修复开启 REMAX_DEBUG 后显示 ejs debug 信息的问题 ([#1141](https://github.com/remaxjs/remax/issues/1141)) ([9ce6352](https://github.com/remaxjs/remax/commit/9ce635207a2866d46b74a308397300da1d1f0579))
+
+### Features
+
+- web 端支持自定义模板 ([#1115](https://github.com/remaxjs/remax/issues/1115)) ([c602637](https://github.com/remaxjs/remax/commit/c6026378093bc2bf31aaa69e421ff4e136009d05))
+- 新增 Modal 组件 ([#1133](https://github.com/remaxjs/remax/issues/1133)) ([4c801d4](https://github.com/remaxjs/remax/commit/4c801d4ad239c1eee8c7b073cf506c44cb3e0bb5))
+
+# [2.6.0](https://github.com/remaxjs/remax/compare/v2.5.5...v2.6.0) (2020-07-03)
+
+### Bug Fixes
+
+- **ali:** Video 组件支持 enableNative 属性 ([0398f49](https://github.com/remaxjs/remax/commit/0398f495cf0d6deb072df91a00d5d7ac531ecc34))
+- **toutiao:** 修复部分组件缺少默认值的问题 ([#1128](https://github.com/remaxjs/remax/issues/1128)) ([cc00bb3](https://github.com/remaxjs/remax/commit/cc00bb32f43f3fbb614681869bd1b2a7ddd85dee))
+- **web:** 修复 web 下 useQuery 无法获取到参数的问题 ([c6e6b75](https://github.com/remaxjs/remax/commit/c6e6b7516a14c88ddc326f167a932befd18c720e)), closes [#1112](https://github.com/remaxjs/remax/issues/1112)
+- **web:** 修复样式加载顺序问题 ([#1129](https://github.com/remaxjs/remax/issues/1129)) ([af8db50](https://github.com/remaxjs/remax/commit/af8db5035567ed41a5e5eca4996aac9cfe0d5d27))
+
+### Features
+
+- **cli:** 开发模式下支持压缩文件 ([#1102](https://github.com/remaxjs/remax/issues/1102)) ([167bba6](https://github.com/remaxjs/remax/commit/167bba6e0b98d2500e582b919f92aaca19420bca))
+
+## [2.5.5](https://github.com/remaxjs/remax/compare/v2.5.4...v2.5.5) (2020-06-18)
+
+### Bug Fixes
+
+- **wechat:** 修复条件渲染错误 ([#1100](https://github.com/remaxjs/remax/issues/1100)) ([a204ec7](https://github.com/remaxjs/remax/commit/a204ec7dd3ade1b6b97cd834f018fafa67ec960a)), closes [#1096](https://github.com/remaxjs/remax/issues/1096) [#1099](https://github.com/remaxjs/remax/issues/1099)
+
+## [2.5.4](https://github.com/remaxjs/remax/compare/v2.5.3...v2.5.4) (2020-06-18)
+
+### Bug Fixes
+
+- 修复部分自定义 babel 插件不生效的问题 ([#1097](https://github.com/remaxjs/remax/issues/1097)) ([b72d1ad](https://github.com/remaxjs/remax/commit/b72d1ad5e3da497fa3c4884f0b005d1b4c5333ce)), closes [#1094](https://github.com/remaxjs/remax/issues/1094)
+
+## [2.5.3](https://github.com/remaxjs/remax/compare/v2.5.2...v2.5.3) (2020-06-17)
+
+### Bug Fixes
+
+- **web:** 修复 React DevTools 引起的运行错误 ([15cf022](https://github.com/remaxjs/remax/commit/15cf02269024fa6f3480c295de2ad99618168443))
+
+## [2.5.2](https://github.com/remaxjs/remax/compare/v2.5.1...v2.5.2) (2020-06-16)
+
+### Bug Fixes
+
+- **ali:** 修复条件渲染 JSX 可能导致报错的问题 ([#1092](https://github.com/remaxjs/remax/issues/1092)) ([309bc5b](https://github.com/remaxjs/remax/commit/309bc5b22c08679f1a159cd2fb53644f8a42da15))
+
+## [2.5.1](https://github.com/remaxjs/remax/compare/v2.5.0...v2.5.1) (2020-06-16)
+
+### Bug Fixes
+
+- **ali:** 修复 MovableView 缺失的属性 ([#1089](https://github.com/remaxjs/remax/issues/1089)) ([d54847d](https://github.com/remaxjs/remax/commit/d54847d6af4deb1d5e6a271ae5a5d171cca51f58))
+
+# [2.5.0](https://github.com/remaxjs/remax/compare/v2.4.1...v2.5.0) (2020-06-15)
+
+### Bug Fixes
+
+- **ali:** 修复 Textarea[enableNative] 不生效的问题 ([7724528](https://github.com/remaxjs/remax/commit/77245283adb1662330647250b1eb27bcc724d3db))
+- **cli:** 修复 notify 命令不生效的问题 ([#1071](https://github.com/remaxjs/remax/issues/1071)) ([e229c48](https://github.com/remaxjs/remax/commit/e229c48b624deb95c54ced5fad9ce4f61b381663))
+- **wechat:** 修复更新已删除的节点导致报错的问题 ([#1078](https://github.com/remaxjs/remax/issues/1078)) ([84f45fa](https://github.com/remaxjs/remax/commit/84f45fab73a1fd86326bd52806a465e6c96a00ef)), closes [#1065](https://github.com/remaxjs/remax/issues/1065)
+
+### Features
+
+- 支持 React DevTools ([#994](https://github.com/remaxjs/remax/issues/994)) ([396b326](https://github.com/remaxjs/remax/commit/396b3269d05f4d3218c3c3637d2aaaca03a5673c))
+- **remax:** onTouchStart onTouchMove onTouchEnd 支持阻止冒泡 ([#1072](https://github.com/remaxjs/remax/issues/1072)) ([5a532c1](https://github.com/remaxjs/remax/commit/5a532c1935e900e8a86e288077d92338a46832f5)), closes [#1068](https://github.com/remaxjs/remax/issues/1068)
+
+## [2.4.1](https://github.com/remaxjs/remax/compare/v2.4.0...v2.4.1) (2020-06-10)
+
+### Bug Fixes
+
+- 修复 style 属性为 null 时报错的问题 ([#1066](https://github.com/remaxjs/remax/issues/1066)) ([ff83df3](https://github.com/remaxjs/remax/commit/ff83df3b1761eeb779f50eaea5d3df6f931bae53)), closes [#1065](https://github.com/remaxjs/remax/issues/1065)
+
+# [2.4.0](https://github.com/remaxjs/remax/compare/v2.3.0...v2.4.0) (2020-06-05)
+
+### Bug Fixes
+
+- 修正生成的模板中会带有页面没用到的小程序自定义组件的问题 ([#1043](https://github.com/remaxjs/remax/issues/1043)) ([c300c33](https://github.com/remaxjs/remax/commit/c300c3307ea41c0cff662922fec12391eac2cb79))
+- **wechat:** 修复 Map 组件 polygons 属性不生效的问题 ([#1038](https://github.com/remaxjs/remax/issues/1038)) ([48487b2](https://github.com/remaxjs/remax/commit/48487b21f94be6d73c02a91847d9a4e46d476bb8)), closes [#1035](https://github.com/remaxjs/remax/issues/1035)
+
+### Features
+
+- **cli:** 新增 -a 参数用于分析构建后的包依赖 ([#1014](https://github.com/remaxjs/remax/issues/1014)) ([97759d1](https://github.com/remaxjs/remax/commit/97759d1b107e7e7be392b5a703fe329f97cf4081)), closes [#958](https://github.com/remaxjs/remax/issues/958)
+
+# [2.3.0](https://github.com/remaxjs/remax/compare/v2.2.0...v2.3.0) (2020-06-04)
+
+### Bug Fixes
+
+- 修复 ES Module 的运行时插件无法注册的问题 ([8e73f1d](https://github.com/remaxjs/remax/commit/8e73f1d5fcc2dc2f1ee2bc9ad9caa5a992c99c5a))
+
+### Features
+
+- 插件支持编译时的 onAppConfig 和 onPageConfig hook ([#1015](https://github.com/remaxjs/remax/issues/1015)) ([9ee59be](https://github.com/remaxjs/remax/commit/9ee59beb37422049e87bdbaf8e3431c3a6a7f762))
+- 支持 onLoad 和 unload 生命周期 ([4bfc325](https://github.com/remaxjs/remax/commit/4bfc325ec627cc75bcbe8e6524368d8a93ac8674))
+- 支持 public 目录 ([#1016](https://github.com/remaxjs/remax/issues/1016)) ([0ed6caf](https://github.com/remaxjs/remax/commit/0ed6caf64a58b15d2e3330d8a8de7cf3eddb63d5))
+
+### Performance Improvements
+
+- **remax:** 避免更新没有变化的属性 ([#989](https://github.com/remaxjs/remax/issues/989)) ([4709bda](https://github.com/remaxjs/remax/commit/4709bda754bd4d042d6259aff9ab074ed34f8ad8))
+
+# [2.2.0](https://github.com/remaxjs/remax/compare/v2.1.1...v2.2.0) (2020-05-29)
+
+### Bug Fixes
+
+- **cli:** 修复 watch 模式自定义 cwd 导致编译两次的问题 ([#1008](https://github.com/remaxjs/remax/issues/1008)) ([c14e111](https://github.com/remaxjs/remax/commit/c14e111b1b18299f36a9e95fa43386944e05b7dd))
+
+### Features
+
+- 小程序端支持 suspense ([#995](https://github.com/remaxjs/remax/issues/995)) ([aa23f14](https://github.com/remaxjs/remax/commit/aa23f14fa2836b76d43b50c73f0655011a41a403))
+- 支持运行时插件 ([#988](https://github.com/remaxjs/remax/issues/988)) ([3a59fff](https://github.com/remaxjs/remax/commit/3a59fff8efc6de0a163715762cfb2f3e179fe443)), closes [#983](https://github.com/remaxjs/remax/issues/983)
+
+## [2.1.1](https://github.com/remaxjs/remax/compare/v2.1.0...v2.1.1) (2020-05-21)
+
+### Bug Fixes
+
+- **ali:** 修正 Button[onGetAuthorize] 不生效的问题 ([2c3d27e](https://github.com/remaxjs/remax/commit/2c3d27e5a744fb6f80362b6a891c58c1dcfde7e6))
+- 修复表单类组件 name 属性不生效的问题 ([#981](https://github.com/remaxjs/remax/issues/981)) ([07d0a22](https://github.com/remaxjs/remax/commit/07d0a22ef3b27a5297ddef87e7372f75fb922bf0))
+
+# [2.1.0](https://github.com/remaxjs/remax/compare/v2.0.7...v2.1.0) (2020-05-21)
+
+### Bug Fixes
+
+- 修正错误的 webpack mode ([f46dd92](https://github.com/remaxjs/remax/commit/f46dd926f08eb2f3f43326f35768efa8cf1be794))
+- 添加 port 至 options 并增加默认值：3000 ([ec7b67e](https://github.com/remaxjs/remax/commit/ec7b67ee4f0dd31434795d9d7526b6435298c576))
+- 移除 options 中的 default，在运行时动态判断以避免 CI 错误 ([6bec914](https://github.com/remaxjs/remax/commit/6bec914249dbcaba71c7fde5f0c984163a412fd9))
+
+### Features
+
+- configWebpack 新增 addCSSRule 帮助方法 ([aaf6a88](https://github.com/remaxjs/remax/commit/aaf6a885bc0dcd20f1cd3c5a182fb14a5d497aa1))
+- 支持通过 --port 指定端口号 ([fb2a78f](https://github.com/remaxjs/remax/commit/fb2a78fc43c758876e7e69fb5c4d441c195a007b))
+
+## [2.0.7](https://github.com/remaxjs/remax/compare/v2.0.6...v2.0.7) (2020-05-14)
+
+### Bug Fixes
+
+- 修正配置文件的 watch ([#951](https://github.com/remaxjs/remax/issues/951)) ([2540706](https://github.com/remaxjs/remax/commit/254070694453fd31c9c42f7c43269a68f7589039))
+
+## [2.0.6](https://github.com/remaxjs/remax/compare/v2.0.5...v2.0.6) (2020-05-13)
+
+### Bug Fixes
+
+- **web:** 修复同构 px 转 rem 失效 ([#924](https://github.com/remaxjs/remax/issues/924)) ([b5da034](https://github.com/remaxjs/remax/commit/b5da0343ee739bb257673b752c340623212aaa63))
+- **web:** 修复构建错误 ([b99177f](https://github.com/remaxjs/remax/commit/b99177fb4d77854efbc1def780fdbb52f42eb04d)), closes [#934](https://github.com/remaxjs/remax/issues/934)
+
+## [2.0.5](https://github.com/remaxjs/remax/compare/v2.0.4...v2.0.5) (2020-05-12)
+
+### Bug Fixes
+
+- **one:** 修复 remax/one 头条 View 组件 onTap 不生效的问题 ([#936](https://github.com/remaxjs/remax/issues/936)) ([1af831d](https://github.com/remaxjs/remax/commit/1af831d5ff141541966e4358a569984bedac250b))
+- 修复 windows watch 模式生命周期不生效的问题 ([#930](https://github.com/remaxjs/remax/issues/930)) ([29ca6e6](https://github.com/remaxjs/remax/commit/29ca6e6c6efab24d62a4ed06c23f0baaaf652250))
+
+## [2.0.4](https://github.com/remaxjs/remax/compare/v2.0.3...v2.0.4) (2020-05-10)
+
+### Bug Fixes
+
+- 修复 watch 时新增生命周期回调不生效的问题 ([8cdc87c](https://github.com/remaxjs/remax/commit/8cdc87c1d71f45851d8e1bc4b2cb93a21d007d1a)), closes [#913](https://github.com/remaxjs/remax/issues/913)
+- **web:** 修正配置 rootDir 不生效的问题 ([a53512e](https://github.com/remaxjs/remax/commit/a53512e2d7c5ce554630c3dc72b9dfaa74451bdc))
+- 修正 watch 时修改配置不生效的问题 ([c0c3862](https://github.com/remaxjs/remax/commit/c0c3862db8f0f4ca69a9ba84b6fb3aa7cd8f05f2))
+- **wechat:** 增加 getRealtimeLogManager api ([67db014](https://github.com/remaxjs/remax/commit/67db014fd48a9b62425b28188b66f67b5f75dac3)), closes [#884](https://github.com/remaxjs/remax/issues/884)
+
+### Reverts
+
+- Revert "修复一大波 watch 问题 (#909)" (#915) ([74e6bca](https://github.com/remaxjs/remax/commit/74e6bca78ad26a9ddce2f40b3bda387b71bdff60)), closes [#909](https://github.com/remaxjs/remax/issues/909) [#915](https://github.com/remaxjs/remax/issues/915)
+
+## [2.0.3](https://github.com/remaxjs/remax/compare/v2.0.2...v2.0.3) (2020-05-08)
+
+### Bug Fixes
+
+- **cli:** 修复生产环境生命周期和自定义组件可能无效的问题 ([489cf75](https://github.com/remaxjs/remax/commit/489cf75a32e727be401939fae9fad97ee2af3a37)), closes [#905](https://github.com/remaxjs/remax/issues/905) [#904](https://github.com/remaxjs/remax/issues/904)
+
+## [2.0.2](https://github.com/remaxjs/remax/compare/v2.0.1...v2.0.2) (2020-05-07)
+
+### Bug Fixes
+
+- **cli:** 修复存在循环依赖时，cli build 不会结束的问题 ([ea5308b](https://github.com/remaxjs/remax/commit/ea5308bacac1b3e6707a101834701223ec711d17))
+- **one:** 导出 remax/one 组件 props type 定义 ([482ec49](https://github.com/remaxjs/remax/commit/482ec49ae2bfa54f63814175350a92661dd42c88))
+
+## [2.0.1](https://github.com/remaxjs/remax/compare/v2.0.0...v2.0.1) (2020-05-06)
+
+### Bug Fixes
+
+- 修复 configWebpack 缺少的 webpack 实例参数 ([52cb52a](https://github.com/remaxjs/remax/commit/52cb52a92b8577c55e807191d9a5dc510eb4927e))
+- 修复无法解析字体文件的问题 ([9a325d6](https://github.com/remaxjs/remax/commit/9a325d62ecbbdf6354e5d5dfc0120953e0846f89))
+- 修复部分 App 生命周期不生效的问题 ([#898](https://github.com/remaxjs/remax/issues/898)) ([e6c6bf1](https://github.com/remaxjs/remax/commit/e6c6bf1d5feed53562fb1edb547c073c4d8a8362)), closes [#895](https://github.com/remaxjs/remax/issues/895)
+- 修正 common chunk 切分错误导致包过大的问题 ([#900](https://github.com/remaxjs/remax/issues/900)) ([cf444aa](https://github.com/remaxjs/remax/commit/cf444aa16a731c823615ef5dc59ed4f773ad16b4))
+
+# [2.0.0](https://github.com/remaxjs/remax/compare/v2.0.0-alpha.18...v2.0.0) (2020-05-05)
+
+### Bug Fixes
+
+- **ali:** 修复 Input 组件的 enableNative 属性不生效的问题 ([f428027](https://github.com/remaxjs/remax/commit/f42802796fd1be93cbdfde47dd8c6060cac19f04))
+
+# [2.0.0-alpha.18](https://github.com/remaxjs/remax/compare/v2.0.0-alpha.17...v2.0.0-alpha.18) (2020-05-05)
+
+### Features
+
+- 完善插件机制 ([#850](https://github.com/remaxjs/remax/issues/850)) ([0897cbf](https://github.com/remaxjs/remax/commit/0897cbf0d427362981d3d9523ff38259ff4abebb))
+
+# [2.0.0-alpha.17](https://github.com/remaxjs/remax/compare/v2.0.0-alpha.16...v2.0.0-alpha.17) (2020-04-30)
+
+### Bug Fixes
+
+- **wechat:** 修复 OfficialAccount 属性问题 ([4b80e6d](https://github.com/remaxjs/remax/commit/4b80e6d393f150fe1c5e2f41b1dc8cccabe66410))
+- 修复 beforeTabItemTap hook 不生效的问题 ([3dd4ba7](https://github.com/remaxjs/remax/commit/3dd4ba7668f7f916dbbf5a77b71dda4655a1a079))
+
+# [2.0.0-alpha.16](https://github.com/remaxjs/remax/compare/v2.0.0-alpha.15...v2.0.0-alpha.16) (2020-04-29)
+
+### Bug Fixes
+
+- 修复 usePageEvent 不生效的问题 ([a470d15](https://github.com/remaxjs/remax/commit/a470d1523c917d35d8ff5b109dae4699916b723c))
+- 修复遗失的 useNativeEffect 导出 ([ab19468](https://github.com/remaxjs/remax/commit/ab19468824b225cc8de4624ca2a8ef0517b6f63e))
+
+# [2.0.0-alpha.15](https://github.com/remaxjs/remax/compare/v2.0.0-alpha.14...v2.0.0-alpha.15) (2020-04-29)
+
+### Bug Fixes
+
+- 修复生产环境 build 结束命令不退出的问题 ([7102a90](https://github.com/remaxjs/remax/commit/7102a90d8b5120f3c8c5ae81797e5bc19f7aa137))
+- 修复生产环境打包会丢失自定义组件的问题 ([92df12d](https://github.com/remaxjs/remax/commit/92df12ddfc905428d3d59a04a0311d841ea660f0))
+- **cli:** 修复 @remax/cli 缺少 @remax/macro 依赖的问题 ([#867](https://github.com/remaxjs/remax/issues/867)) ([1d5e322](https://github.com/remaxjs/remax/commit/1d5e32218bf43dac1bab28802455a4852a8cfaa5))
+- **wechat:** 修复 onResize 和 onTabItemTap 不生效的问题 ([#857](https://github.com/remaxjs/remax/issues/857)) ([0a1a94a](https://github.com/remaxjs/remax/commit/0a1a94a667071fc777d4985416a4fbbb725a5a91))
+- 两份 extensions 配置 ([c6ac704](https://github.com/remaxjs/remax/commit/c6ac704148b4328276cb2a30a6022567d46cc1b0))
+
+### Features
+
+- 自定义组件也支持 stopPropagation ([#870](https://github.com/remaxjs/remax/issues/870)) ([3fb7d46](https://github.com/remaxjs/remax/commit/3fb7d46d907128372b6dabe7548afac074c7c579))
+
+# [2.0.0-alpha.14](https://github.com/remaxjs/remax/compare/v2.0.0-alpha.13...v2.0.0-alpha.14) (2020-04-27)
+
+### Bug Fixes
+
+- 修复自定义组件中 usingComponent 没有被处理的问题 ([a068a33](https://github.com/remaxjs/remax/commit/a068a335595d7f969902d6a2f97cfd86f537c480)), closes [#845](https://github.com/remaxjs/remax/issues/845)
+- 修复自定义组件引用 npm 模块失效的问题 ([00762db](https://github.com/remaxjs/remax/commit/00762db978bb4583088953eb6ccf1547adfd68b5)), closes [#762](https://github.com/remaxjs/remax/issues/762)
+
+# [2.0.0-alpha.13](https://github.com/remaxjs/remax/compare/v2.0.0-alpha.12...v2.0.0-alpha.13) (2020-04-26)
+
+**Note:** Version bump only for package @remax/cli
+
+# [2.0.0-alpha.12](https://github.com/remaxjs/remax/compare/v2.0.0-alpha.11...v2.0.0-alpha.12) (2020-04-26)
+
+**Note:** Version bump only for package @remax/cli
+
+# [2.0.0-alpha.11](https://github.com/remaxjs/remax/compare/v2.0.0-alpha.10...v2.0.0-alpha.11) (2020-04-26)
+
+**Note:** Version bump only for package @remax/cli
+
+# [2.0.0-alpha.10](https://github.com/remaxjs/remax/compare/v2.0.0-alpha.9...v2.0.0-alpha.10) (2020-04-26)
+
+### Bug Fixes
+
+- 修复 postcss.config.js 的加载 ([aae5461](https://github.com/remaxjs/remax/commit/aae5461296c9640719835743818a7aa33dc73020))
+
+# [2.0.0-alpha.9](https://github.com/remaxjs/remax/compare/v2.0.0-alpha.8...v2.0.0-alpha.9) (2020-04-26)
+
+**Note:** Version bump only for package @remax/cli
+
+# [2.0.0-alpha.8](https://github.com/remaxjs/remax/compare/v2.0.0-alpha.7...v2.0.0-alpha.8) (2020-04-26)
+
+**Note:** Version bump only for package @remax/cli
+
+# [2.0.0-alpha.7](https://github.com/remaxjs/remax/compare/v2.0.0-alpha.6...v2.0.0-alpha.7) (2020-04-23)
+
+### Bug Fixes
+
+- 修复 remax 命令可能执行出错的问题 ([83ba129](https://github.com/remaxjs/remax/commit/83ba129c68c7457db078e22fd3921d5b4c775b25))
+- 修复 web 下 App 不是第一个 entry 的问题 ([31cccdc](https://github.com/remaxjs/remax/commit/31cccdc4c9c5dbc93c506feefbc039b66c1dfbff))
+
+### Features
+
+- 返回编译事件，方便跟其他工具集成 ([901bc6e](https://github.com/remaxjs/remax/commit/901bc6ef046194c80b102a1165b0349362c7b59b))
+
+# [2.0.0-alpha.6](https://github.com/remaxjs/remax/compare/v2.0.0-alpha.5...v2.0.0-alpha.6) (2020-04-21)
+
+### Bug Fixes
+
+- **cli:** 修复 app.config.ts 和 [page].config.ts 没有触发重新编译的问题 ([232ff43](https://github.com/remaxjs/remax/commit/232ff43eb8c5ead784e186297134f16682f66f6e)), closes [#831](https://github.com/remaxjs/remax/issues/831)
+- **web:** web 端 button 字体大小与小程序统一 ([3b88837](https://github.com/remaxjs/remax/commit/3b888370dda752e886baead8e123a936b0a4b59f))
+- 修复使用 scss 出错的问题 ([6f205f0](https://github.com/remaxjs/remax/commit/6f205f082a64995c96f8b412c9537ac063ffa3a9)), closes [#827](https://github.com/remaxjs/remax/issues/827)
+
+### Performance Improvements
+
+- 简化 web watch 模式输出的信息 ([#835](https://github.com/remaxjs/remax/issues/835)) ([c9c24d7](https://github.com/remaxjs/remax/commit/c9c24d725bc37ee9fcbde77ea9d9acdc8611a288))
+
+# [2.0.0-alpha.5](https://github.com/remaxjs/remax/compare/v2.0.0-alpha.4...v2.0.0-alpha.5) (2020-04-20)
+
+### Bug Fixes
+
+- 修复 web 平台下没有配置 tabbar 出错的问题 ([de442c0](https://github.com/remaxjs/remax/commit/de442c08fe6ac3d266cc7ca087f6b0c9ce5a99f7))
+- 修复 windows 下无法启动 web 应用的问题 ([#816](https://github.com/remaxjs/remax/issues/816)) ([f6a9a05](https://github.com/remaxjs/remax/commit/f6a9a05e08433601f57259c0b775b702e59a7a37)), closes [#806](https://github.com/remaxjs/remax/issues/806)
+- 修复引入 JSON 文件报错的问题 ([ec4c29f](https://github.com/remaxjs/remax/commit/ec4c29fc39568047ddbd0d98aba3d6c4e0a2272c))
+
+### Features
+
+- **web:** web 添加浏览器兼容支持 ([1baf5f2](https://github.com/remaxjs/remax/commit/1baf5f28af07978445b5bc47ced8e830e49eb67f)), closes [#808](https://github.com/remaxjs/remax/issues/808)
+- 自动识别 CSS Modules ([#807](https://github.com/remaxjs/remax/issues/807)) ([b81303c](https://github.com/remaxjs/remax/commit/b81303c6ad8b6890ccf0c09ba9aaff6da2e14123)), closes [#800](https://github.com/remaxjs/remax/issues/800)
+- web 平台 watch 模式支持 hot reload ([#811](https://github.com/remaxjs/remax/issues/811)) ([34507d3](https://github.com/remaxjs/remax/commit/34507d3768a1e3ef2110ced9e604c93c8446d853))
+
+# [2.0.0-alpha.4](https://github.com/remaxjs/remax/compare/v2.0.0-alpha.2...v2.0.0-alpha.4) (2020-04-18)
+
+# [1.21.0](https://github.com/remaxjs/remax/compare/v1.20.0...v1.21.0) (2020-04-14)
+
+### Bug Fixes
+
+- **alipay:** 修复钉钉小程序下没有 Function.prototype.apply 导致的白屏 ([#795](https://github.com/remaxjs/remax/issues/795)) ([17bde7d](https://github.com/remaxjs/remax/commit/17bde7d880d21dd27532909353cdd70c041efe48))
+
+### Features
+
+- **wechat:** 增加 API chooseMedia ([9a9037d](https://github.com/remaxjs/remax/commit/9a9037d29ad2b6228ba48df9aa46ef9c09777b1b))
+
+# [1.20.0](https://github.com/remaxjs/remax/compare/v1.19.8...v1.20.0) (2020-04-13)
+
+### Bug Fixes
+
+- 修复同一页面不能重复渲染的问题 ([#791](https://github.com/remaxjs/remax/issues/791)) ([14dbc28](https://github.com/remaxjs/remax/commit/14dbc2801e2a605d28c25a340ad0951cd403767c))
+
+### Features
+
+- 返回编译事件，方便跟其他工具集成 ([#784](https://github.com/remaxjs/remax/issues/784)) ([f8bed58](https://github.com/remaxjs/remax/commit/f8bed580a01493c89dd5ab4051f7184cf5fa6e70))
+
+## [1.19.8](https://github.com/remaxjs/remax/compare/v1.19.7...v1.19.8) (2020-04-09)
+
+### Bug Fixes
+
+- **alipay:** 修复不同的 key 渲染了相同元素的问题 ([#783](https://github.com/remaxjs/remax/issues/783)) ([3cae6c2](https://github.com/remaxjs/remax/commit/3cae6c266038aacbe778a411be04938c57de2eb1))
+
+# [1.21.0](https://github.com/remaxjs/remax/compare/v1.20.0...v1.21.0) (2020-04-14)
+
+### Bug Fixes
+
+- **alipay:** 修复钉钉小程序下没有 Function.prototype.apply 导致的白屏 ([#795](https://github.com/remaxjs/remax/issues/795)) ([17bde7d](https://github.com/remaxjs/remax/commit/17bde7d880d21dd27532909353cdd70c041efe48))
+
+### Features
+
+- **wechat:** 增加 API chooseMedia ([9a9037d](https://github.com/remaxjs/remax/commit/9a9037d29ad2b6228ba48df9aa46ef9c09777b1b))
+
+# [1.20.0](https://github.com/remaxjs/remax/compare/v1.19.8...v1.20.0) (2020-04-13)
+
+### Bug Fixes
+
+- 修复同一页面不能重复渲染的问题 ([#791](https://github.com/remaxjs/remax/issues/791)) ([14dbc28](https://github.com/remaxjs/remax/commit/14dbc2801e2a605d28c25a340ad0951cd403767c))
+
+### Features
+
+- 返回编译事件，方便跟其他工具集成 ([#784](https://github.com/remaxjs/remax/issues/784)) ([f8bed58](https://github.com/remaxjs/remax/commit/f8bed580a01493c89dd5ab4051f7184cf5fa6e70))
+
+## [1.19.8](https://github.com/remaxjs/remax/compare/v1.19.7...v1.19.8) (2020-04-09)
+
+### Bug Fixes
+
+- # **alipay:** 修复不同的 key 渲染了相同元素的问题 ([#783](https://github.com/remaxjs/remax/issues/783)) ([3cae6c2](https://github.com/remaxjs/remax/commit/3cae6c266038aacbe778a411be04938c57de2eb1))
+
+# [2.0.0-alpha.2](https://github.com/remaxjs/remax/compare/v2.0.0-alpha.1...v2.0.0-alpha.2) (2020-04-16)
+
+### Bug Fixes
+
+- **cli:** 修复 adapter 引入错误的问题 ([906c93d](https://github.com/remaxjs/remax/commit/906c93da8ac02541d9a56973b1f375a4926b78e3))
+
+# [2.0.0-alpha.1](https://github.com/remaxjs/remax/compare/v2.0.0-alpha.0...v2.0.0-alpha.1) (2020-04-16)
+
+**Note:** Version bump only for package @remax/cli
+
+# [2.0.0-alpha.0](https://github.com/remaxjs/remax/compare/v1.19.7...v2.0.0-alpha.0) (2020-04-16)
+
+### Bug Fixes
+
+- 修正 css-loader 找不到的问题 ([f541399](https://github.com/remaxjs/remax/commit/f5413996985ae419554fd3e9fb7eed459c0d7177))
+
+### Features
+
+- add basic web support ([#757](https://github.com/remaxjs/remax/issues/757)) ([b3b48b1](https://github.com/remaxjs/remax/commit/b3b48b111cd5889f17d3ec15f1c39437a9dc7fc4))
+- add CoverageIgnorePlugin ([f49997f](https://github.com/remaxjs/remax/commit/f49997f4abe6cb1cbb6894dad391e5870b521f01))
+
+### Reverts
+
+- Revert "fix winpath" ([00951cb](https://github.com/remaxjs/remax/commit/00951cb9dfcdd584afb05536e91e4d2352e0f49f))
+- Revert "make lint happy" ([f9f6194](https://github.com/remaxjs/remax/commit/f9f6194ba09bfc4c962391e4e8bd74522187c1d3))
+  > > > > > > > next
+
+## [1.19.7](https://github.com/remaxjs/remax/compare/v1.19.6...v1.19.7) (2020-04-08)
+
+### Bug Fixes
+
+- 修复微信 ScrollView scrollLeft 不生效的问题 ([8e02c94](https://github.com/remaxjs/remax/commit/8e02c94d260b9f0ab115761bbef33938abbb215c))
+
+## [1.19.6](https://github.com/remaxjs/remax/compare/v1.19.5...v1.19.6) (2020-04-07)
+
+**Note:** Version bump only for package remax-cli
+
+## [1.19.5](https://github.com/remaxjs/remax/compare/v1.19.4...v1.19.5) (2020-04-03)
+
+**Note:** Version bump only for package remax-cli
+
+## [1.19.4](https://github.com/remaxjs/remax/compare/v1.19.3...v1.19.4) (2020-04-03)
+
+### Bug Fixes
+
+- **alipay:** 修复支付宝 IDE 的编译监听 ([b439ee0](https://github.com/remaxjs/remax/commit/b439ee0d6ee0553019f393e871276265b89cc5fb))
+
+## [1.19.3](https://github.com/remaxjs/remax/compare/v1.19.2...v1.19.3) (2020-04-02)
+
+### Bug Fixes
+
+- 修复小程序自定义组件引用多个模板时编译错误的问题 ([#761](https://github.com/remaxjs/remax/issues/761)) ([7757678](https://github.com/remaxjs/remax/commit/7757678a33e827895f3df6d2766bdef9856fb7df))
+
+## [1.19.2](https://github.com/remaxjs/remax/compare/v1.19.1...v1.19.2) (2020-04-01)
+
+### Bug Fixes
+
+- 修复小程序自定义组件的模板引用 ([#759](https://github.com/remaxjs/remax/issues/759)) ([2e82fc1](https://github.com/remaxjs/remax/commit/2e82fc10ded34c3f70d07b8ce647135d4a6ac359))
+
+## [1.19.1](https://github.com/remaxjs/remax/compare/v1.19.0...v1.19.1) (2020-03-31)
+
+### Bug Fixes
+
+- **alipay:** 修复不设置 onShareAppMessage 分享无效的问题 ([#754](https://github.com/remaxjs/remax/issues/754)) ([5c7febc](https://github.com/remaxjs/remax/commit/5c7febcabae19d98019eaa64d46db1b3ff6103f8))
+
+# [1.19.0](https://github.com/remaxjs/remax/compare/v1.18.5...v1.19.0) (2020-03-30)
+
+### Features
+
+- 新增跨平台组件 remax/one ([ff904ac](https://github.com/remaxjs/remax/commit/ff904ac7defc34bd7bd4f71d616d5b21b6eb1aa6)), closes [#373](https://github.com/remaxjs/remax/issues/373)
+
+## [1.18.5](https://github.com/remaxjs/remax/compare/v1.18.4...v1.18.5) (2020-03-27)
+
+### Bug Fixes
+
+- 组件 Image 添加 touch 事件别名 ([9474e14](https://github.com/remaxjs/remax/commit/9474e14bd914edbfa911815005be4d45727b471d)), closes [#743](https://github.com/remaxjs/remax/issues/743)
+
+## [1.18.4](https://github.com/remaxjs/remax/compare/v1.18.3...v1.18.4) (2020-03-25)
+
+### Bug Fixes
+
+- **wechat:** 微信 ScrollView 添加自定义刷新相关属性 ([#742](https://github.com/remaxjs/remax/issues/742)) ([9ef2afd](https://github.com/remaxjs/remax/commit/9ef2afddbadb7e21f4c342e2633049eb016ee0a5))
+
+## [1.18.3](https://github.com/remaxjs/remax/compare/v1.18.2...v1.18.3) (2020-03-25)
+
+### Bug Fixes
+
+- **alipay:** 修复支付宝 IDE 里预览会卡住的问题 ([bc8a50b](https://github.com/remaxjs/remax/commit/bc8a50b2557b711672a1c551caddf5381ec7bb22))
+
+## [1.18.2](https://github.com/remaxjs/remax/compare/v1.18.1...v1.18.2) (2020-03-25)
+
+**Note:** Version bump only for package remax-cli
+
+## [1.18.1](https://github.com/remaxjs/remax/compare/v1.18.0...v1.18.1) (2020-03-24)
+
+### Bug Fixes
+
+- **alipay:** 修复支付宝自定义组件中 node_modules 模块 resolve 不完整的问题 ([7ef374d](https://github.com/remaxjs/remax/commit/7ef374d))
+- 修复 useAppShareAppMessage 不生效的问题 ([#739](https://github.com/remaxjs/remax/issues/739)) ([6e3c562](https://github.com/remaxjs/remax/commit/6e3c562))
+
+# [1.18.0](https://github.com/remaxjs/remax/compare/v1.17.2...v1.18.0) (2020-03-23)
+
+**Note:** Version bump only for package remax-cli
+
+## [1.17.2](https://github.com/remaxjs/remax/compare/v1.17.1...v1.17.2) (2020-03-19)
+
+### Bug Fixes
+
+- 修复自定义组件中引用 node_modules 模块的问题 ([#726](https://github.com/remaxjs/remax/issues/726)) ([22f6064](https://github.com/remaxjs/remax/commit/22f6064))
+
+## [1.17.1](https://github.com/remaxjs/remax/compare/v1.17.0...v1.17.1) (2020-03-19)
+
+**Note:** Version bump only for package remax-cli
+
+# [1.17.0](https://github.com/remaxjs/remax/compare/v1.16.1...v1.17.0) (2020-03-19)
+
+### Features
+
+- 新增 usePageEvent，useAppEvent 统一生命周期 hook ([#722](https://github.com/remaxjs/remax/issues/722)) ([0e8d7cd](https://github.com/remaxjs/remax/commit/0e8d7cd)), closes [#179](https://github.com/remaxjs/remax/issues/179)
+- **remax:** 字节跳动小程序新增 api canIUse、navigateToVideoView ([#721](https://github.com/remaxjs/remax/issues/721)) ([9d0650f](https://github.com/remaxjs/remax/commit/9d0650f))
+
+## [1.16.1](https://github.com/remaxjs/remax/compare/v1.16.0...v1.16.1) (2020-03-18)
+
+### Bug Fixes
+
+- 修复样式文件引入顺序错误的问题 ([b43e6bd](https://github.com/remaxjs/remax/commit/b43e6bd))
+- 修复自定义组件引用在 lerna 项目结构下错误的问题 ([37b6ba4](https://github.com/remaxjs/remax/commit/37b6ba4))
+- 修复自定义组件中 js 文件 resolve 问题 ([ef2dc43](https://github.com/remaxjs/remax/commit/ef2dc43))
+
+# [1.16.0](https://github.com/remaxjs/remax/compare/v1.15.3...v1.16.0) (2020-03-17)
+
+### Features
+
+- 引入 turboPages ([#595](https://github.com/remaxjs/remax/issues/595)) ([88d464e](https://github.com/remaxjs/remax/commit/88d464e))
+
+## [1.15.3](https://github.com/remaxjs/remax/compare/v1.15.2...v1.15.3) (2020-03-17)
+
+### Bug Fixes
+
+- 修复使用 typescript 时 common chunk 可能存在错误引用的问题 ([d2874aa](https://github.com/remaxjs/remax/commit/d2874aa)), closes [#708](https://github.com/remaxjs/remax/issues/708)
+
+## [1.15.2](https://github.com/remaxjs/remax/compare/v1.15.1...v1.15.2) (2020-03-15)
+
+**Note:** Version bump only for package remax-cli
+
+## [1.15.1](https://github.com/remaxjs/remax/compare/v1.15.0...v1.15.1) (2020-03-13)
+
+### Bug Fixes
+
+- 修复 tabBar icon 使用网络图片编译报错的问题 ([baaf172](https://github.com/remaxjs/remax/commit/baaf172)), closes [#697](https://github.com/remaxjs/remax/issues/697)
+- 修复使用 typescript 创建 app.tsx 文件可能导致报错的问题 ([#703](https://github.com/remaxjs/remax/issues/703)) ([16f7f6c](https://github.com/remaxjs/remax/commit/16f7f6c)), closes [#702](https://github.com/remaxjs/remax/issues/702)
+- 字节跳动 View 组件增加 onClick ([#696](https://github.com/remaxjs/remax/issues/696)) ([e216454](https://github.com/remaxjs/remax/commit/e216454))
+
+# [1.15.0](https://github.com/remaxjs/remax/compare/v1.14.2...v1.15.0) (2020-03-11)
+
+### Features
+
+- **cli:** 支持 css modules 更多配置 ([f9838dc](https://github.com/remaxjs/remax/commit/f9838dc))
+
+## [1.14.2](https://github.com/remaxjs/remax/compare/v1.14.1...v1.14.2) (2020-03-05)
+
+### Performance Improvements
+
+- **cli:** 优化生产模式编译速度 ([ffaca9a](https://github.com/remaxjs/remax/commit/ffaca9a))
+
+## [1.14.1](https://github.com/remaxjs/remax/compare/v1.14.0...v1.14.1) (2020-02-28)
+
+**Note:** Version bump only for package remax-cli
+
+# [1.14.0](https://github.com/remaxjs/remax/compare/v1.13.3...v1.14.0) (2020-02-28)
+
+**Note:** Version bump only for package remax-cli
+
+## [1.13.2](https://github.com/remaxjs/remax/compare/v1.13.1...v1.13.2) (2020-02-26)
+
+### Bug Fixes
+
+- 修复点击自定义组件无法触发父组件 stopPropagation 的问题 ([#652](https://github.com/remaxjs/remax/issues/652)) ([1bff049](https://github.com/remaxjs/remax/commit/1bff049)), closes [#536](https://github.com/remaxjs/remax/issues/536) [#283](https://github.com/remaxjs/remax/issues/283)
+
+### Performance Improvements
+
+- **remax:** 优化运行时性能 ([#659](https://github.com/remaxjs/remax/issues/659)) ([0cf3649](https://github.com/remaxjs/remax/commit/0cf3649))
+
+## [1.13.1](https://github.com/remaxjs/remax/compare/v1.13.0...v1.13.1) (2020-02-21)
+
+### Bug Fixes
+
+- 原生组件支持命名空间属性 ([#651](https://github.com/remaxjs/remax/issues/651)) ([224e238](https://github.com/remaxjs/remax/commit/224e238))
+
+# [1.13.0](https://github.com/remaxjs/remax/compare/v1.12.5...v1.13.0) (2020-02-19)
+
+### Features
+
+- 支持使用命名空间属性 ([#650](https://github.com/remaxjs/remax/issues/650)) ([4e9686c](https://github.com/remaxjs/remax/commit/4e9686c)), closes [#642](https://github.com/remaxjs/remax/issues/642)
+
+## [1.12.5](https://github.com/remaxjs/remax/compare/v1.12.4...v1.12.5) (2020-01-31)
+
+### Bug Fixes
+
+- **wechat:** 修复遗漏的 Camera 组件导出 ([d5b81ad](https://github.com/remaxjs/remax/commit/d5b81ad))
+
+## [1.12.4](https://github.com/remaxjs/remax/compare/v1.12.3...v1.12.4) (2020-01-30)
+
+**Note:** Version bump only for package remax-cli
+
+## [1.12.3](https://github.com/remaxjs/remax/compare/v1.12.2...v1.12.3) (2020-01-21)
+
+### Bug Fixes
+
+- 修复环境变量注入导致的语法错误 ([e572c5a](https://github.com/remaxjs/remax/commit/e572c5a))
+
+## [1.12.2](https://github.com/remaxjs/remax/compare/v1.12.1...v1.12.2) (2020-01-19)
+
+### Bug Fixes
+
+- 修复配置 pxToRpx 不生效的问题 ([2c93e21](https://github.com/remaxjs/remax/commit/2c93e21))
+
+## [1.12.1](https://github.com/remaxjs/remax/compare/v1.12.0...v1.12.1) (2020-01-19)
+
+### Bug Fixes
+
+- 修正环境变量注入导致的语法解析错误 ([1fc8350](https://github.com/remaxjs/remax/commit/1fc8350))
+
+# [1.12.0](https://github.com/remaxjs/remax/compare/v1.11.5...v1.12.0) (2020-01-19)
+
+### Bug Fixes
+
+- 修正非 js 后缀名的 cjs 模块构建错误的问题 ([f402c12](https://github.com/remaxjs/remax/commit/f402c12))
+
+### Features
+
+- 支持通过 .env 文件设置环境变量 ([3b3497f](https://github.com/remaxjs/remax/commit/3b3497f))
+
+## [1.11.5](https://github.com/remaxjs/remax/compare/v1.11.4...v1.11.5) (2020-01-18)
+
+### Bug Fixes
+
+- 修正无法引用 events 包的问题 ([#596](https://github.com/remaxjs/remax/issues/596)) ([b7ec83f](https://github.com/remaxjs/remax/commit/b7ec83f))
+
+## [1.11.4](https://github.com/remaxjs/remax/compare/v1.11.3...v1.11.4) (2020-01-17)
+
+### Bug Fixes
+
+- **wechat:** 修复 ScrollView 水平受控问题 ([063d627](https://github.com/remaxjs/remax/commit/063d627))
+
 ## [1.11.3](https://github.com/remaxjs/remax/compare/v1.11.2...v1.11.3) (2020-01-16)
 
 ### Bug Fixes

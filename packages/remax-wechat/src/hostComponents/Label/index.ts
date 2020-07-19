@@ -1,4 +1,4 @@
-import createHostComponent from '../../createHostComponent';
+import { createHostComponent } from '@remax/shared';
 import { BaseProps } from '../../types/component';
 
 export interface LabelProps extends BaseProps {
@@ -6,4 +6,7 @@ export interface LabelProps extends BaseProps {
   for?: string;
 }
 
-export default createHostComponent<LabelProps>('label');
+/**
+ * https://developers.weixin.qq.com/miniprogram/dev/component/label.html
+ */
+export const Label = createHostComponent<LabelProps>('label');

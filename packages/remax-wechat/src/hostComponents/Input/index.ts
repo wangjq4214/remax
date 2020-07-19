@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { BaseProps } from '../../types/component';
-import createHostComponent from '../../createHostComponent';
+import { createHostComponent } from '@remax/shared';
 
 export interface InputProps extends BaseProps {
   /**
@@ -28,7 +28,7 @@ export interface InputProps extends BaseProps {
    * 1.0.0
    * 是否是密码类型
    */
-  password?: string;
+  password?: boolean;
   /**
    * 1.0.0
    * input 的类型
@@ -133,13 +133,24 @@ export interface InputProps extends BaseProps {
   onKeyboardHeightChange?: (event: any) => any;
 }
 
-const Input = createHostComponent<InputProps>('input');
+/**
+ * https://developers.weixin.qq.com/miniprogram/dev/component/input.html
+ */
+export const Input = createHostComponent<InputProps>('input');
 
 Input.defaultProps = {
   type: 'text',
+  password: false,
+  placeholderClassName: 'input-placeholder',
+  disabled: false,
+  cursorSpacing: 0,
+  autoFocus: false,
+  focus: false,
+  confirmType: 'done',
+  confirmHold: false,
   maxlength: 140,
-  selectionEnd: 999,
-  selectionStart: 999,
+  selectionEnd: -1,
+  selectionStart: -1,
+  adjustPosition: true,
+  holdKeyboard: false,
 };
-
-export default Input;

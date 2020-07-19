@@ -3,6 +3,403 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.7.3](https://github.com/remaxjs/remax/compare/v2.7.2...v2.7.3) (2020-07-17)
+
+**Note:** Version bump only for package remax
+
+## [2.7.2](https://github.com/remaxjs/remax/compare/v2.7.1...v2.7.2) (2020-07-16)
+
+**Note:** Version bump only for package remax
+
+## [2.7.1](https://github.com/remaxjs/remax/compare/v2.7.0...v2.7.1) (2020-07-14)
+
+**Note:** Version bump only for package remax
+
+# [2.7.0](https://github.com/remaxjs/remax/compare/v2.6.0...v2.7.0) (2020-07-09)
+
+**Note:** Version bump only for package remax
+
+# [2.6.0](https://github.com/remaxjs/remax/compare/v2.5.5...v2.6.0) (2020-07-03)
+
+**Note:** Version bump only for package remax
+
+## [2.5.5](https://github.com/remaxjs/remax/compare/v2.5.4...v2.5.5) (2020-06-18)
+
+**Note:** Version bump only for package remax
+
+## [2.5.4](https://github.com/remaxjs/remax/compare/v2.5.3...v2.5.4) (2020-06-18)
+
+**Note:** Version bump only for package remax
+
+## [2.5.3](https://github.com/remaxjs/remax/compare/v2.5.2...v2.5.3) (2020-06-17)
+
+**Note:** Version bump only for package remax
+
+## [2.5.2](https://github.com/remaxjs/remax/compare/v2.5.1...v2.5.2) (2020-06-16)
+
+**Note:** Version bump only for package remax
+
+## [2.5.1](https://github.com/remaxjs/remax/compare/v2.5.0...v2.5.1) (2020-06-16)
+
+**Note:** Version bump only for package remax
+
+# [2.5.0](https://github.com/remaxjs/remax/compare/v2.4.1...v2.5.0) (2020-06-15)
+
+**Note:** Version bump only for package remax
+
+## [2.4.1](https://github.com/remaxjs/remax/compare/v2.4.0...v2.4.1) (2020-06-10)
+
+**Note:** Version bump only for package remax
+
+# [2.4.0](https://github.com/remaxjs/remax/compare/v2.3.0...v2.4.0) (2020-06-05)
+
+### Features
+
+- 新增 Node.js 的构建 API remax/build ([#1040](https://github.com/remaxjs/remax/issues/1040)) ([04f79fb](https://github.com/remaxjs/remax/commit/04f79fb69f2ea131ccf2dca44816f58d03bb64a2))
+
+# [2.3.0](https://github.com/remaxjs/remax/compare/v2.2.0...v2.3.0) (2020-06-04)
+
+**Note:** Version bump only for package remax
+
+# [2.2.0](https://github.com/remaxjs/remax/compare/v2.1.1...v2.2.0) (2020-05-29)
+
+**Note:** Version bump only for package remax
+
+## [2.1.1](https://github.com/remaxjs/remax/compare/v2.1.0...v2.1.1) (2020-05-21)
+
+**Note:** Version bump only for package remax
+
+# [2.1.0](https://github.com/remaxjs/remax/compare/v2.0.7...v2.1.0) (2020-05-21)
+
+**Note:** Version bump only for package remax
+
+## [2.0.7](https://github.com/remaxjs/remax/compare/v2.0.6...v2.0.7) (2020-05-14)
+
+**Note:** Version bump only for package remax
+
+## [2.0.6](https://github.com/remaxjs/remax/compare/v2.0.5...v2.0.6) (2020-05-13)
+
+**Note:** Version bump only for package remax
+
+## [2.0.5](https://github.com/remaxjs/remax/compare/v2.0.4...v2.0.5) (2020-05-12)
+
+**Note:** Version bump only for package remax
+
+## [2.0.4](https://github.com/remaxjs/remax/compare/v2.0.3...v2.0.4) (2020-05-10)
+
+**Note:** Version bump only for package remax
+
+## [2.0.3](https://github.com/remaxjs/remax/compare/v2.0.2...v2.0.3) (2020-05-08)
+
+**Note:** Version bump only for package remax
+
+## [2.0.2](https://github.com/remaxjs/remax/compare/v2.0.1...v2.0.2) (2020-05-07)
+
+**Note:** Version bump only for package remax
+
+## [2.0.1](https://github.com/remaxjs/remax/compare/v2.0.0...v2.0.1) (2020-05-06)
+
+### Bug Fixes
+
+- 修复找不到 unstable_batchedUpdates 的问题 ([f96038c](https://github.com/remaxjs/remax/commit/f96038c7fb4a310a7a3de786fc1e48697021dcf1))
+
+# [2.0.0](https://github.com/remaxjs/remax/compare/v2.0.0-alpha.18...v2.0.0) (2020-05-05)
+
+**Note:** Version bump only for package remax
+
+# [2.0.0-alpha.18](https://github.com/remaxjs/remax/compare/v2.0.0-alpha.17...v2.0.0-alpha.18) (2020-05-05)
+
+**Note:** Version bump only for package remax
+
+# [2.0.0-alpha.17](https://github.com/remaxjs/remax/compare/v2.0.0-alpha.16...v2.0.0-alpha.17) (2020-04-30)
+
+**Note:** Version bump only for package remax
+
+# [2.0.0-alpha.16](https://github.com/remaxjs/remax/compare/v2.0.0-alpha.15...v2.0.0-alpha.16) (2020-04-29)
+
+### Bug Fixes
+
+- 修复遗失的 useNativeEffect 导出 ([ab19468](https://github.com/remaxjs/remax/commit/ab19468824b225cc8de4624ca2a8ef0517b6f63e))
+
+# [2.0.0-alpha.15](https://github.com/remaxjs/remax/compare/v2.0.0-alpha.14...v2.0.0-alpha.15) (2020-04-29)
+
+**Note:** Version bump only for package remax
+
+# [2.0.0-alpha.14](https://github.com/remaxjs/remax/compare/v2.0.0-alpha.13...v2.0.0-alpha.14) (2020-04-27)
+
+**Note:** Version bump only for package remax
+
+# [2.0.0-alpha.13](https://github.com/remaxjs/remax/compare/v2.0.0-alpha.12...v2.0.0-alpha.13) (2020-04-26)
+
+**Note:** Version bump only for package remax
+
+# [2.0.0-alpha.12](https://github.com/remaxjs/remax/compare/v2.0.0-alpha.11...v2.0.0-alpha.12) (2020-04-26)
+
+**Note:** Version bump only for package remax
+
+# [2.0.0-alpha.11](https://github.com/remaxjs/remax/compare/v2.0.0-alpha.10...v2.0.0-alpha.11) (2020-04-26)
+
+**Note:** Version bump only for package remax
+
+# [2.0.0-alpha.10](https://github.com/remaxjs/remax/compare/v2.0.0-alpha.9...v2.0.0-alpha.10) (2020-04-26)
+
+**Note:** Version bump only for package remax
+
+# [2.0.0-alpha.9](https://github.com/remaxjs/remax/compare/v2.0.0-alpha.8...v2.0.0-alpha.9) (2020-04-26)
+
+**Note:** Version bump only for package remax
+
+# [2.0.0-alpha.8](https://github.com/remaxjs/remax/compare/v2.0.0-alpha.7...v2.0.0-alpha.8) (2020-04-26)
+
+**Note:** Version bump only for package remax
+
+# [2.0.0-alpha.7](https://github.com/remaxjs/remax/compare/v2.0.0-alpha.6...v2.0.0-alpha.7) (2020-04-23)
+
+### Bug Fixes
+
+- 修复 remax 命令可能执行出错的问题 ([83ba129](https://github.com/remaxjs/remax/commit/83ba129c68c7457db078e22fd3921d5b4c775b25))
+
+# [2.0.0-alpha.6](https://github.com/remaxjs/remax/compare/v2.0.0-alpha.5...v2.0.0-alpha.6) (2020-04-21)
+
+### Bug Fixes
+
+- **web:** 修复 web 端 title 配置不生效的问题 ([ce21382](https://github.com/remaxjs/remax/commit/ce213826efbcfa85583c05565192f74fd19458b0))
+- **web:** web 端 button 字体大小与小程序统一 ([3b88837](https://github.com/remaxjs/remax/commit/3b888370dda752e886baead8e123a936b0a4b59f))
+- **wechat:** 使用微信官方的 api 类型 ([4f13453](https://github.com/remaxjs/remax/commit/4f13453765172023212125bff624090539090f07))
+
+# [2.0.0-alpha.5](https://github.com/remaxjs/remax/compare/v2.0.0-alpha.4...v2.0.0-alpha.5) (2020-04-20)
+
+**Note:** Version bump only for package remax
+
+# [2.0.0-alpha.4](https://github.com/remaxjs/remax/compare/v2.0.0-alpha.2...v2.0.0-alpha.4) (2020-04-18)
+
+# [1.21.0](https://github.com/remaxjs/remax/compare/v1.20.0...v1.21.0) (2020-04-14)
+
+### Bug Fixes
+
+- **alipay:** 修复钉钉小程序下没有 Function.prototype.apply 导致的白屏 ([#795](https://github.com/remaxjs/remax/issues/795)) ([17bde7d](https://github.com/remaxjs/remax/commit/17bde7d880d21dd27532909353cdd70c041efe48))
+
+# [1.20.0](https://github.com/remaxjs/remax/compare/v1.19.8...v1.20.0) (2020-04-13)
+
+### Bug Fixes
+
+- 修复同一页面不能重复渲染的问题 ([#791](https://github.com/remaxjs/remax/issues/791)) ([14dbc28](https://github.com/remaxjs/remax/commit/14dbc2801e2a605d28c25a340ad0951cd403767c))
+
+## [1.19.8](https://github.com/remaxjs/remax/compare/v1.19.7...v1.19.8) (2020-04-09)
+
+# [2.0.0-alpha.3](https://github.com/remaxjs/remax/compare/v2.0.0-alpha.2...v2.0.0-alpha.3) (2020-04-16)
+
+**Note:** Version bump only for package remax
+
+# [2.0.0-alpha.2](https://github.com/remaxjs/remax/compare/v2.0.0-alpha.1...v2.0.0-alpha.2) (2020-04-16)
+
+**Note:** Version bump only for package remax
+
+# [2.0.0-alpha.1](https://github.com/remaxjs/remax/compare/v2.0.0-alpha.0...v2.0.0-alpha.1) (2020-04-16)
+
+**Note:** Version bump only for package remax
+
+# [2.0.0-alpha.0](https://github.com/remaxjs/remax/compare/v1.19.7...v2.0.0-alpha.0) (2020-04-16)
+
+### Features
+
+- add basic web support ([#757](https://github.com/remaxjs/remax/issues/757)) ([b3b48b1](https://github.com/remaxjs/remax/commit/b3b48b111cd5889f17d3ec15f1c39437a9dc7fc4))
+
+# [1.21.0](https://github.com/remaxjs/remax/compare/v1.20.0...v1.21.0) (2020-04-14)
+
+### Bug Fixes
+
+- **alipay:** 修复钉钉小程序下没有 Function.prototype.apply 导致的白屏 ([#795](https://github.com/remaxjs/remax/issues/795)) ([17bde7d](https://github.com/remaxjs/remax/commit/17bde7d880d21dd27532909353cdd70c041efe48))
+
+# [1.20.0](https://github.com/remaxjs/remax/compare/v1.19.8...v1.20.0) (2020-04-13)
+
+### Bug Fixes
+
+- 修复同一页面不能重复渲染的问题 ([#791](https://github.com/remaxjs/remax/issues/791)) ([14dbc28](https://github.com/remaxjs/remax/commit/14dbc2801e2a605d28c25a340ad0951cd403767c))
+
+## [1.19.8](https://github.com/remaxjs/remax/compare/v1.19.7...v1.19.8) (2020-04-09)
+
+**Note:** Version bump only for package remax
+
+## [1.19.7](https://github.com/remaxjs/remax/compare/v1.19.6...v1.19.7) (2020-04-08)
+
+**Note:** Version bump only for package remax
+
+## [1.19.6](https://github.com/remaxjs/remax/compare/v1.19.5...v1.19.6) (2020-04-07)
+
+**Note:** Version bump only for package remax
+
+## [1.19.5](https://github.com/remaxjs/remax/compare/v1.19.4...v1.19.5) (2020-04-03)
+
+**Note:** Version bump only for package remax
+
+## [1.19.4](https://github.com/remaxjs/remax/compare/v1.19.3...v1.19.4) (2020-04-03)
+
+**Note:** Version bump only for package remax
+
+## [1.19.3](https://github.com/remaxjs/remax/compare/v1.19.2...v1.19.3) (2020-04-02)
+
+**Note:** Version bump only for package remax
+
+## [1.19.2](https://github.com/remaxjs/remax/compare/v1.19.1...v1.19.2) (2020-04-01)
+
+**Note:** Version bump only for package remax
+
+## [1.19.1](https://github.com/remaxjs/remax/compare/v1.19.0...v1.19.1) (2020-03-31)
+
+### Bug Fixes
+
+- **alipay:** 修复不设置 onShareAppMessage 分享无效的问题 ([#754](https://github.com/remaxjs/remax/issues/754)) ([5c7febc](https://github.com/remaxjs/remax/commit/5c7febcabae19d98019eaa64d46db1b3ff6103f8))
+
+# [1.19.0](https://github.com/remaxjs/remax/compare/v1.18.5...v1.19.0) (2020-03-30)
+
+### Features
+
+- 新增跨平台组件 remax/one ([ff904ac](https://github.com/remaxjs/remax/commit/ff904ac7defc34bd7bd4f71d616d5b21b6eb1aa6)), closes [#373](https://github.com/remaxjs/remax/issues/373)
+
+## [1.18.5](https://github.com/remaxjs/remax/compare/v1.18.4...v1.18.5) (2020-03-27)
+
+**Note:** Version bump only for package remax
+
+## [1.18.4](https://github.com/remaxjs/remax/compare/v1.18.3...v1.18.4) (2020-03-25)
+
+### Bug Fixes
+
+- **wechat:** 微信 ScrollView 添加自定义刷新相关属性 ([#742](https://github.com/remaxjs/remax/issues/742)) ([9ef2afd](https://github.com/remaxjs/remax/commit/9ef2afddbadb7e21f4c342e2633049eb016ee0a5))
+
+## [1.18.3](https://github.com/remaxjs/remax/compare/v1.18.2...v1.18.3) (2020-03-25)
+
+**Note:** Version bump only for package remax
+
+## [1.18.2](https://github.com/remaxjs/remax/compare/v1.18.1...v1.18.2) (2020-03-25)
+
+**Note:** Version bump only for package remax
+
+## [1.18.1](https://github.com/remaxjs/remax/compare/v1.18.0...v1.18.1) (2020-03-24)
+
+### Bug Fixes
+
+- 修复 useAppShareAppMessage 不生效的问题 ([#739](https://github.com/remaxjs/remax/issues/739)) ([6e3c562](https://github.com/remaxjs/remax/commit/6e3c562))
+
+# [1.18.0](https://github.com/remaxjs/remax/compare/v1.17.2...v1.18.0) (2020-03-23)
+
+**Note:** Version bump only for package remax
+
+## [1.17.2](https://github.com/remaxjs/remax/compare/v1.17.1...v1.17.2) (2020-03-19)
+
+**Note:** Version bump only for package remax
+
+## [1.17.1](https://github.com/remaxjs/remax/compare/v1.17.0...v1.17.1) (2020-03-19)
+
+### Bug Fixes
+
+- **alipay:** 补充支付宝 onBack 事件 hook 参数传递 ([c0600b7](https://github.com/remaxjs/remax/commit/c0600b7))
+
+# [1.17.0](https://github.com/remaxjs/remax/compare/v1.16.1...v1.17.0) (2020-03-19)
+
+### Features
+
+- 新增 usePageEvent，useAppEvent 统一生命周期 hook ([#722](https://github.com/remaxjs/remax/issues/722)) ([0e8d7cd](https://github.com/remaxjs/remax/commit/0e8d7cd)), closes [#179](https://github.com/remaxjs/remax/issues/179)
+
+## [1.16.1](https://github.com/remaxjs/remax/compare/v1.16.0...v1.16.1) (2020-03-18)
+
+**Note:** Version bump only for package remax
+
+# [1.16.0](https://github.com/remaxjs/remax/compare/v1.15.3...v1.16.0) (2020-03-17)
+
+### Features
+
+- 引入 turboPages ([#595](https://github.com/remaxjs/remax/issues/595)) ([88d464e](https://github.com/remaxjs/remax/commit/88d464e))
+
+## [1.15.3](https://github.com/remaxjs/remax/compare/v1.15.2...v1.15.3) (2020-03-17)
+
+**Note:** Version bump only for package remax
+
+## [1.15.2](https://github.com/remaxjs/remax/compare/v1.15.1...v1.15.2) (2020-03-15)
+
+### Bug Fixes
+
+- **alipay:** 修复 useOptionMenuClick 回调没有参数的问题 ([58e7ecb](https://github.com/remaxjs/remax/commit/58e7ecb))
+
+## [1.15.1](https://github.com/remaxjs/remax/compare/v1.15.0...v1.15.1) (2020-03-13)
+
+**Note:** Version bump only for package remax
+
+# [1.15.0](https://github.com/remaxjs/remax/compare/v1.14.2...v1.15.0) (2020-03-11)
+
+**Note:** Version bump only for package remax
+
+## [1.14.2](https://github.com/remaxjs/remax/compare/v1.14.1...v1.14.2) (2020-03-05)
+
+**Note:** Version bump only for package remax
+
+## [1.14.1](https://github.com/remaxjs/remax/compare/v1.14.0...v1.14.1) (2020-02-28)
+
+### Bug Fixes
+
+- 修复条件渲染可能导致的布局错乱 ([3a8478a](https://github.com/remaxjs/remax/commit/3a8478a))
+
+# [1.14.0](https://github.com/remaxjs/remax/compare/v1.13.3...v1.14.0) (2020-02-28)
+
+**Note:** Version bump only for package remax
+
+## [1.13.2](https://github.com/remaxjs/remax/compare/v1.13.1...v1.13.2) (2020-02-26)
+
+### Bug Fixes
+
+- 修复点击自定义组件无法触发父组件 stopPropagation 的问题 ([#652](https://github.com/remaxjs/remax/issues/652)) ([1bff049](https://github.com/remaxjs/remax/commit/1bff049)), closes [#536](https://github.com/remaxjs/remax/issues/536) [#283](https://github.com/remaxjs/remax/issues/283)
+
+### Performance Improvements
+
+- **remax:** 优化运行时性能 ([#659](https://github.com/remaxjs/remax/issues/659)) ([0cf3649](https://github.com/remaxjs/remax/commit/0cf3649))
+
+## [1.13.1](https://github.com/remaxjs/remax/compare/v1.13.0...v1.13.1) (2020-02-21)
+
+### Bug Fixes
+
+- 原生组件支持命名空间属性 ([#651](https://github.com/remaxjs/remax/issues/651)) ([224e238](https://github.com/remaxjs/remax/commit/224e238))
+
+# [1.13.0](https://github.com/remaxjs/remax/compare/v1.12.5...v1.13.0) (2020-02-19)
+
+**Note:** Version bump only for package remax
+
+## [1.12.5](https://github.com/remaxjs/remax/compare/v1.12.4...v1.12.5) (2020-01-31)
+
+**Note:** Version bump only for package remax
+
+## [1.12.4](https://github.com/remaxjs/remax/compare/v1.12.3...v1.12.4) (2020-01-30)
+
+**Note:** Version bump only for package remax
+
+## [1.12.3](https://github.com/remaxjs/remax/compare/v1.12.2...v1.12.3) (2020-01-21)
+
+**Note:** Version bump only for package remax
+
+## [1.12.2](https://github.com/remaxjs/remax/compare/v1.12.1...v1.12.2) (2020-01-19)
+
+### Bug Fixes
+
+- 修复 api 类型丢失的问题 ([ed7a77b](https://github.com/remaxjs/remax/commit/ed7a77b)), closes [#598](https://github.com/remaxjs/remax/issues/598)
+- 修复配置 pxToRpx 不生效的问题 ([2c93e21](https://github.com/remaxjs/remax/commit/2c93e21))
+
+## [1.12.1](https://github.com/remaxjs/remax/compare/v1.12.0...v1.12.1) (2020-01-19)
+
+**Note:** Version bump only for package remax
+
+# [1.12.0](https://github.com/remaxjs/remax/compare/v1.11.5...v1.12.0) (2020-01-19)
+
+### Features
+
+- 支持通过 .env 文件设置环境变量 ([3b3497f](https://github.com/remaxjs/remax/commit/3b3497f))
+
+## [1.11.5](https://github.com/remaxjs/remax/compare/v1.11.4...v1.11.5) (2020-01-18)
+
+**Note:** Version bump only for package remax
+
+## [1.11.4](https://github.com/remaxjs/remax/compare/v1.11.3...v1.11.4) (2020-01-17)
+
+**Note:** Version bump only for package remax
+
 ## [1.11.3](https://github.com/remaxjs/remax/compare/v1.11.2...v1.11.3) (2020-01-16)
 
 **Note:** Version bump only for package remax
@@ -29,7 +426,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### Features
 
 - 新增 useQuery，用于在组件中获取页面 query ([3603139](https://github.com/remaxjs/remax/commit/3603139))
-- 引入 unstable_useNativeEffect ([#557](https://github.com/remaxjs/remax/issues/557)) ([be40751](https://github.com/remaxjs/remax/commit/be40751)), closes [#310](https://github.com/remaxjs/remax/issues/310) [#255](https://github.com/remaxjs/remax/issues/255)
+- 引入 useNativeEffect ([#557](https://github.com/remaxjs/remax/issues/557)) ([be40751](https://github.com/remaxjs/remax/commit/be40751)), closes [#310](https://github.com/remaxjs/remax/issues/310) [#255](https://github.com/remaxjs/remax/issues/255)
 
 ### Performance Improvements
 

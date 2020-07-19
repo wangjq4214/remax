@@ -12,7 +12,7 @@
 		<img src="https://img.shields.io/travis/remaxjs/remax/master?style=flat-square" alt="Travis CI build status" />
 	</a>
 	<a href="https://github.com/remaxjs/remax/actions?workflow=Node+CI">
-		<img src="https://github.com/remaxjs/remax/workflows/Node%20CI/badge.svg" alt="CI build status" />
+		<img src="https://github.com/remaxjs/remax/workflows/Build%20&%20Test/badge.svg" alt="CI build status" />
 	</a>
 	<a href="https://codecov.io/gh/remaxjs/remax">
 		<img src="https://img.shields.io/codecov/c/github/remaxjs/remax/master.svg?style=flat-square" alt="Codecov" />
@@ -37,12 +37,11 @@ Remax 将 React 运行在小程序环境中，让你可以使用完整的 React 
 
 你可以从我们的[网站上](https://remaxjs.org)找到详细的文档。
 
-也可以通过[快速开始指南](https://remaxjs.org/quick-start)来立即体验 Remax。
+也可以通过[快速开始指南](https://remaxjs.org/guide/quick-start)来立即体验 Remax。
 
 ## 示例
 
 https://github.com/remaxjs/examples
-
 
 ## 贡献者
 

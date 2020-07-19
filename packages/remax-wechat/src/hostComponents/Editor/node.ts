@@ -1,4 +1,8 @@
 export const alias = {
+  id: 'id',
+  className: 'class',
+  style: 'style',
+  animation: 'animation',
   readOnly: 'read-only',
   placeholder: 'placeholder',
   showImgSize: 'show-img-size',
@@ -9,7 +13,6 @@ export const alias = {
   onBlur: 'bindblur',
   onInput: 'bindinput',
   onStatusChange: 'bindstatuschange',
-  animation: 'animation',
 };
 
 export const props = Object.values(alias);

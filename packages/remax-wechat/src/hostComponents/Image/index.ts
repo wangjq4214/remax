@@ -1,4 +1,4 @@
-import createHostComponent from '../../createHostComponent';
+import { createHostComponent } from '@remax/shared';
 import { BaseProps } from '../../types/component';
 
 export interface ImageProps extends BaseProps {
@@ -39,6 +39,11 @@ export interface ImageProps extends BaseProps {
     | 'bottom left'
     | 'bottom right';
   /**
+   * 2.9.0
+   * 默认不解析 webP 格式，只支持网络资源
+   */
+  webp?: boolean;
+  /**
    * 1.5.0
    * 图片懒加载，在即将进入一定范围（上下三屏）时才开始加载
    */
@@ -58,6 +63,20 @@ export interface ImageProps extends BaseProps {
    * 当图片载入完毕时触发，event.detail = {height, width}
    */
   onLoad?: (event: any) => any;
+  onTouchStart?: (e: any) => void;
+  onTouchMove?: (e: any) => void;
+  onTouchEnd?: (e: any) => void;
+  onTouchCancel?: (e: any) => void;
 }
 
-export default createHostComponent<ImageProps>('image');
+/**
+ * https://developers.weixin.qq.com/miniprogram/dev/component/image.html
+ */
+export const Image = createHostComponent<ImageProps>('image');
+
+Image.defaultProps = {
+  mode: 'scaleToFill',
+  webp: false,
+  lazyLoad: false,
+  showMenuByLongpress: false,
+};

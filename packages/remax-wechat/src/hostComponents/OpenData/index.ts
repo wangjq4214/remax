@@ -1,4 +1,4 @@
-import createHostComponent from '../../createHostComponent';
+import { createHostComponent } from '@remax/shared';
 import { BaseProps } from '../../types/component';
 
 export interface OpenDataProps extends BaseProps {
@@ -23,5 +23,11 @@ export interface OpenDataProps extends BaseProps {
   /** 群名称或用户信息为空时触发 2.8.1 */
   onError?: (event: any) => any;
 }
+/**
+ * https://developers.weixin.qq.com/miniprogram/dev/component/open-data.html
+ */
+export const OpenData = createHostComponent<OpenDataProps>('open-data');
 
-export default createHostComponent<OpenDataProps>('open-data');
+OpenData.defaultProps = {
+  lang: 'en',
+};

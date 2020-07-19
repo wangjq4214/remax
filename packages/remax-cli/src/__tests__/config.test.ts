@@ -1,86 +1,58 @@
 import * as path from 'path';
-import getConfig from '../getConfig';
 import readManifest from '../readManifest';
-import build from './helpers/build';
+import { Platform } from '@remax/types';
 
-describe('remax config', () => {
-  it('override output', () => {
-    process.chdir(path.join(__dirname, 'fixtures/config'));
-    const result = getConfig();
-    expect(result.output).toEqual('build');
-  });
-
-  it('schema validation', () => {
-    process.chdir(path.join(__dirname, 'fixtures/exception/remax.config'));
-
-    expect(() => {
-      getConfig();
-    }).toThrowErrorMatchingInlineSnapshot(`
-"Invalid configuration object. remax has been initialised using a configuration object that does not match the API schema.
- - configuration has an unknown property 'xxx'. These properties are valid:
-   object { cssModules?, pxToRpx?, cwd?, progress?, compressTemplate?, output?, rootDir?, UNSAFE_wechatTemplateDepth?, alias?, postcss?, rollupOptions? }
- - configuration.cssModules should be one of these:
-   RegExp | boolean
-   Details:
-    * configuration.cssModules should be an instance of RegExp.
-    * configuration.cssModules should be a boolean.
- - configuration.pxToRpx should be a boolean.
- - configuration.cwd should be a string.
- - configuration.progress should be a boolean.
- - configuration.compressTemplate should be a boolean.
- - configuration.output should be a string.
- - configuration.rootDir should be a string.
- - configuration.UNSAFE_wechatTemplateDepth should be one of these:
-   object { … } | number
-   Details:
-    * configuration.UNSAFE_wechatTemplateDepth should be an object:
-      object { … }
-    * configuration.UNSAFE_wechatTemplateDepth should be a number.
- - configuration.alias should be an object:
-   object { … }
- - configuration.postcss.options should be an object:
-   object { … }
- - configuration.postcss.plugins should be an array:
-   [any, ...]
- - configuration.postcss.url.inline should be a boolean.
- - configuration.postcss.url.maxSize should be a number.
- - configuration.rollupOptions should be one of these:
-   object { … } | function
-   Details:
-    * configuration.rollupOptions should be an object:
-      object { … }
-    * configuration.rollupOptions should be an instance of function."
-`);
-  });
-});
+import configWeb from '../build/webpack/config.web';
+import configMini from '../build/webpack/config.mini';
+import API from '../API';
+import { getDefaultOptions } from '../defaultOptions';
 
 describe('manifest', () => {
   it('throw error when file not exists with strict mode enabled', () => {
-    expect(readManifest('', 'alipay')).toEqual({});
+    expect(readManifest('', Platform.ali)).toEqual({});
     expect(() => {
-      readManifest('', 'alipay', true);
+      readManifest('', Platform.ali, true);
     }).toThrow();
   });
 
   it('return empty object when javascript manifest file contains no config', () => {
     expect(
-      readManifest(
-        path.join(__dirname, './fixtures/exception/manifest.js/app.config'),
-        'alipay'
-      )
+      readManifest(path.join(__dirname, './fixtures/exception/manifest.js/app.config'), Platform.ali)
     ).toMatchObject({});
   });
 
   it('return empty object when typescript manifest file contains no config', () => {
     expect(
-      readManifest(
-        path.join(__dirname, './fixtures/exception/manifest.ts/app.config'),
-        'alipay'
-      )
+      readManifest(path.join(__dirname, './fixtures/exception/manifest.ts/app.config'), Platform.ali)
     ).toMatchObject({});
   });
+});
 
-  it('throw error when missing pages config in app.config', async () => {
-    await expect(build('exception', 'alipay')).rejects.toThrow();
+describe('web webpack config', () => {
+  it('is work', async () => {
+    const options = getDefaultOptions();
+    options.cwd = path.join(__dirname, './integration/fixtures/wechat');
+    options.analyze = true;
+    options.configWebpack = ({ config }) => {
+      expect(config.entryPoints.has('index')).toBe(true);
+      expect(config.plugins.has('webpack-bundle-analyzer')).toBe(true);
+    };
+
+    configWeb(new API(), options);
+  });
+});
+
+describe('mini webpack config', () => {
+  it('is work', async () => {
+    const options = getDefaultOptions();
+    const projectRoot = path.join(__dirname, './integration/fixtures/wechat');
+    options.cwd = projectRoot;
+    options.analyze = true;
+    options.configWebpack = ({ config }) => {
+      expect(config.entryPoints.has('pages/index')).toBe(true);
+      expect(config.plugins.has('webpack-bundle-analyzer')).toBe(true);
+    };
+
+    configMini(new API(), options, Platform.wechat);
   });
 });

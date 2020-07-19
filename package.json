@@ -3,24 +3,27 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "watch": "lerna run watch --parallel",
-    "prebuild": "lerna run build --scope remax-types && lerna run build --scope remax-alipay && lerna run build --scope remax-wechat && lerna run build --scope remax-toutiao",
-    "build": "lerna run build --scope remax.macro && lerna run build --scope remax && lerna run build --scope babel-preset-remax && lerna run build --scope remax-cli && lerna run build --scope umi-plugin-remax",
-    "test": "lerna run --ignore babel-preset-remax --ignore website --ignore umi-plugin-remax --stream test",
-    "test:integration": "./scripts/integration-test",
-    "test:cov": "lerna run --ignore babel-preset-remax --ignore website --ignore umi-plugin-remax --stream test -- --collect-coverage",
+    "watch": "concurrently \"lerna run build:cjs --parallel -- -w\" \"tsc -b -w\"",
+    "prebuild": "npm run clean:packages",
+    "build": "tsc -b && lerna run build:cjs",
+    "test": "lerna run --ignore babel-preset-remax --ignore website --ignore e2e-dummy --ignore e2e-mini --stream test",
+    "test:e2e": "lerna run --stream --scope e2e-dummy test",
+    "test:e2e-mini": "lerna run --stream --scope e2e-mini test",
+    "test:cov": "lerna run --ignore babel-preset-remax --ignore website --ignore e2e-dummy --ignore e2e-mini --stream test -- --collect-coverage",
     "clean": "lerna clean",
-    "readme:copy": "lerna exec 'cp ../../README.md' . --scope remax --scope remax-cli",
-    "readme:clean": "lerna exec 'rm README.md' --scope remax --scope remax-cli",
+    "clean:packages": "lerna run clean",
+    "readme:copy": "lerna exec 'cp ../../README.md' . --scope remax --scope @remax/cli",
+    "readme:clean": "lerna exec 'rm README.md' --scope remax --scope @remax/cli",
     "prepack": "npm run readme:copy",
     "postpack": "npm run readme:clean",
     "postinstall": "lerna bootstrap",
     "lint": "eslint \"packages/*/src/**/*.{ts,tsx}\"",
     "prerelease": "./scripts/prerelease",
-    "release": "lerna publish --force-publish --create-release=github",
+    "release": "lerna publish --force-publish --create-release=github --exact",
     "postrelease": "./scripts/postrelease",
     "site:build": "lerna run --scope website --stream build",
     "site:deploy": "lerna run --scope website --stream deploy",
+    "install:codesandbox": "PUPPETEER_SKIP_DOWNLOAD=1 yarn install",
     "authors": "./scripts/authors"
   },
   "dependencies": {
@@ -29,12 +32,12 @@
     "@typescript-eslint/eslint-plugin": "^2.12.0",
     "@typescript-eslint/parser": "^2.12.0",
     "eslint": "^6.2.1",
-    "eslint-config-prettier": "^6.1.0",
+    "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.3",
-    "husky": "^3.0.2",
+    "husky": "^4.2.3",
     "lerna": "^3.4.3",
-    "prettier": "^1.19.1",
+    "prettier": "^2.0.5",
     "typescript": "^3.7.3"
   },
   "husky": {
@@ -44,10 +47,20 @@
     }
   },
   "devDependencies": {
-    "lint-staged": ">=8"
+    "@types/express": "^4.17.4",
+    "@types/webpack-dev-middleware": "^3.7.0",
+    "concurrently": "^5.2.0",
+    "lint-staged": ">=8",
+    "puppeteer": "~4.0.0",
+    "rimraf": "^3.0.2"
   },
   "collective": {
     "type": "opencollective",
     "url": "https://opencollective.com/remax"
-  }
+  },
+  "workspaces": [
+    "packages/*",
+    "e2e/*",
+    "website"
+  ]
 }

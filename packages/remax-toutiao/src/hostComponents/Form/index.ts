@@ -1,4 +1,4 @@
-import createHostComponent from '../../createHostComponent';
+import { createHostComponent } from '@remax/shared';
 
 import { BaseProps } from '../../types/component';
 
@@ -6,8 +6,12 @@ export interface FormProps extends BaseProps {
   onSubmit?: (e: any) => void;
   onReset?: (e: any) => void;
   reportSubmit?: boolean;
-  catchsubmit?: (e: any) => void;
-  catchreset?: (e: any) => void;
+  catchSubmit?: (e: any) => void;
+  catchReset?: (e: any) => void;
 }
 
-export default createHostComponent<FormProps>('form');
+export const Form = createHostComponent<FormProps>('form');
+
+Form.defaultProps = {
+  reportSubmit: false,
+};

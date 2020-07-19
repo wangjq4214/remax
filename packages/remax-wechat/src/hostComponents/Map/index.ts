@@ -1,4 +1,4 @@
-import createHostComponent from '../../createHostComponent';
+import { createHostComponent } from '@remax/shared';
 import { BaseProps } from '../../types/component';
 
 export interface MapProps extends BaseProps {
@@ -50,6 +50,8 @@ export interface MapProps extends BaseProps {
   enableSatellite?: boolean;
   /** (default: false) 是否开启实时路况 2.7.0 */
   enableTraffic?: boolean;
+  /** 配置项 2.8.2 */
+  setting?: any;
   /** 点击标记点时触发，e.detail = {markerId} 1.0.0 */
   onMarkerClick?: (event: any) => any;
   /** 点击控件时触发，e.detail = {controlId} 1.0.0 */
@@ -63,5 +65,23 @@ export interface MapProps extends BaseProps {
   /** 点击地图poi点时触发，e.detail = {name, longitude, latitude} 2.3.0 */
   onPoiTap?: (event: any) => any;
 }
-
-export default createHostComponent<MapProps>('map');
+/**
+ * https://developers.weixin.qq.com/miniprogram/dev/component/map.html
+ */
+export const Map = createHostComponent<MapProps>('map');
+Map.defaultProps = {
+  scale: 16,
+  showLocation: false,
+  layerStyle: 1,
+  rotate: 0,
+  enable3D: false,
+  showCompass: false,
+  showScale: false,
+  enableOverlooking: false,
+  enableZoom: true,
+  enableScroll: true,
+  enableRotate: false,
+  enableSatellite: false,
+  enableTraffic: false,
+  setting: {},
+};

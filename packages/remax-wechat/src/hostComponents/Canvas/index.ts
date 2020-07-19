@@ -1,4 +1,4 @@
-import createHostComponent from '../../createHostComponent';
+import { createHostComponent } from '@remax/shared';
 import { BaseProps } from '../../types/component';
 
 export interface CanvasProps extends BaseProps {
@@ -22,4 +22,11 @@ export interface CanvasProps extends BaseProps {
   onError?: (event: any) => any;
 }
 
-export default createHostComponent<CanvasProps>('canvas');
+/**
+ * @see https://developers.weixin.qq.com/miniprogram/dev/component/canvas.html
+ */
+export const Canvas = createHostComponent<CanvasProps>('canvas');
+
+Canvas.defaultProps = {
+  disableScroll: false,
+};

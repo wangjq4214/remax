@@ -1,4 +1,4 @@
-import createHostComponent from '../../createHostComponent';
+import { createHostComponent } from '@remax/shared';
 import { BaseProps } from '../../types/component';
 
 export interface FormProps extends BaseProps {
@@ -12,4 +12,12 @@ export interface FormProps extends BaseProps {
   onReset?: (event: any) => any;
 }
 
-export default createHostComponent<FormProps>('form');
+/**
+ * @see https://developers.weixin.qq.com/miniprogram/dev/component/form.html
+ */
+export const Form = createHostComponent<FormProps>('form');
+
+Form.defaultProps = {
+  reportSubmit: false,
+  reportSubmitTimeout: 0,
+};

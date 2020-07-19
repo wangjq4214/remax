@@ -1,4 +1,4 @@
-import createHostComponent from '../../createHostComponent';
+import { createHostComponent } from '@remax/shared';
 import { BaseProps } from '../../types/component';
 
 export interface CoverImageProps extends BaseProps {
@@ -10,4 +10,7 @@ export interface CoverImageProps extends BaseProps {
   onError?: (event: any) => any;
 }
 
-export default createHostComponent<CoverImageProps>('cover-image');
+/**
+ * @see https://developers.weixin.qq.com/miniprogram/dev/component/cover-image.html
+ */
+export const CoverImage = createHostComponent<CoverImageProps>('cover-image');

@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { BaseProps } from '../../types/component';
-import createHostComponent from '../../createHostComponent';
+import { createHostComponent } from '@remax/shared';
 
 export interface ImageProps extends BaseProps {
   src?: string;
@@ -25,8 +25,15 @@ export interface ImageProps extends BaseProps {
   onError?: (e: any) => void;
   onTap?: (e: any) => void;
   onClick?: (e: any) => void;
-  catchTap?: (e: any) => void;
+  onTouchStart?: (e: any) => void;
+  onTouchMove?: (e: any) => void;
+  onTouchEnd?: (e: any) => void;
+  onTouchCancel?: (e: any) => void;
 }
-const Image = createHostComponent<ImageProps>('image');
 
-export default Image;
+export const Image = createHostComponent<ImageProps>('image');
+
+Image.defaultProps = {
+  mode: 'scaleToFill',
+  lazyLoad: false,
+};

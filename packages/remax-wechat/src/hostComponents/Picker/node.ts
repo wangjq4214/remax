@@ -1,7 +1,10 @@
 export const alias = {
   id: 'id',
+  name: 'name',
   className: 'class',
   style: 'style',
+  animation: 'animation',
+  mode: 'mode',
   range: 'range',
   rangeKey: 'range-key',
   value: 'value',
@@ -13,7 +16,6 @@ export const alias = {
   fields: 'fields',
   customItem: 'custom-item',
   disabled: 'disabled',
-  animation: 'animation',
 };
 
 export const props = Object.values(alias);

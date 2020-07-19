@@ -1,4 +1,4 @@
-import createHostComponent from '../../createHostComponent';
+import { createHostComponent } from '@remax/shared';
 import { BaseProps } from '../../types/component';
 
 export interface ButtonProps extends BaseProps {
@@ -47,19 +47,12 @@ export interface ButtonProps extends BaseProps {
    * openSetting	打开授权设置页	2.0.7
    * feedback	打开“意见反馈”页面，用户可提交反馈内容并上传日志，开发者可以登录小程序管理后台后进入左侧菜单“客服反馈”页面获取到反馈内容	2.1.0
    */
-  openType?:
-    | 'contact'
-    | 'share'
-    | 'getPhoneNumber'
-    | 'getUserInfo'
-    | 'launchApp'
-    | 'openSetting'
-    | 'feedback';
+  openType?: 'contact' | 'share' | 'getPhoneNumber' | 'getUserInfo' | 'launchApp' | 'openSetting' | 'feedback';
   /**
    * 1.0.0
    * 指定按钮按下去的样式类。当 hover-class="none" 时，没有点击态效果
    */
-  hoverClass?: string;
+  hoverClassName?: string;
   /**
    * 1.5.0
    * 指定是否阻止本节点的祖先节点出现点击态
@@ -146,4 +139,13 @@ export interface ButtonProps extends BaseProps {
   onLaunchApp?: (event: any) => any;
 }
 
-export default createHostComponent<ButtonProps>('button');
+/**
+ * https://developers.weixin.qq.com/miniprogram/dev/component/button.html
+ */
+export const Button = createHostComponent<ButtonProps>('button');
+
+Button.defaultProps = {
+  hoverClassName: 'button-hover',
+  hoverStartTime: 20,
+  hoverStayTime: 70,
+};

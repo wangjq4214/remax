@@ -1,7 +1,8 @@
-import createHostComponent from '../../createHostComponent';
+import { createHostComponent } from '@remax/shared';
 import { BaseProps } from '../../types/component';
 
 export interface RadioProps extends BaseProps {
+  name?: string;
   /** radio 标识。当该radio 选中时，radio-group 的 change 事件会携带radio的value 1.0.0 */
   value?: string;
   /** (default: false) 当前是否选中 1.0.0 */
@@ -11,5 +12,13 @@ export interface RadioProps extends BaseProps {
   /** (default: #09BB07) radio的颜色，同css的color 1.0.0 */
   color?: string;
 }
+/**
+ * https://developers.weixin.qq.com/miniprogram/dev/component/radio.html
+ */
+export const Radio = createHostComponent<RadioProps>('radio');
 
-export default createHostComponent<RadioProps>('radio');
+Radio.defaultProps = {
+  checked: false,
+  disabled: false,
+  color: '#09BB07',
+};

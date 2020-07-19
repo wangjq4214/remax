@@ -1,4 +1,4 @@
-import createHostComponent from '../../createHostComponent';
+import { createHostComponent } from '@remax/shared';
 
 import { BaseProps } from '../../types/component';
 
@@ -6,7 +6,7 @@ type Mode = 'selector' | 'multiSelector' | 'time' | 'date' | 'region';
 
 interface PickerPropsMap extends BaseProps {
   selector: SelectorProps;
-  multiSelector: MutiSelectorProps;
+  multiSelector: MultipleSelectorProps;
   time: TimeProps;
   date: DateProps;
   region: RegionProps;
@@ -21,7 +21,9 @@ interface SelectorProps {
   onCancel?: (e: any) => void;
 }
 
-type MutiSelectorProps = { onColumnchange?: (e: any) => void } & SelectorProps;
+type MultipleSelectorProps = {
+  onColumnChange?: (e: any) => void;
+} & SelectorProps;
 
 interface TimeProps {
   value?: string;
@@ -35,6 +37,7 @@ interface TimeProps {
 type DateProps = TimeProps & { fields?: string };
 
 interface RegionProps {
+  name?: string;
   value?: any[];
   customItem?: string;
   onChange?: (e: any) => void;
@@ -42,10 +45,11 @@ interface RegionProps {
   onCancel?: (e: any) => void;
 }
 
-export type PickerProps<T> = T extends Mode
-  ? {
-      mode: T;
-    } & PickerPropsMap[T]
-  : never;
+export type PickerProps<T> = T extends Mode ? { mode: T } & PickerPropsMap[T] : never;
 
-export default createHostComponent<PickerProps<Mode>>('picker');
+export const Picker = createHostComponent<PickerProps<Mode>>('picker');
+
+Picker.defaultProps = {
+  mode: 'selector',
+  disabled: false,
+};

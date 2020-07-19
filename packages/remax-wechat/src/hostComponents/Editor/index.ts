@@ -1,4 +1,4 @@
-import createHostComponent from '../../createHostComponent';
+import { createHostComponent } from '@remax/shared';
 import { BaseProps } from '../../types/component';
 
 export interface EditorProps extends BaseProps {
@@ -23,4 +23,15 @@ export interface EditorProps extends BaseProps {
   /** 通过 Context 方法改变编辑器内样式时触发，返回选区已设置的样式 2.7.0  */
   onStatusChange?: (event: any) => any;
 }
-export default createHostComponent<EditorProps>('editor');
+
+/**
+ * @see https://developers.weixin.qq.com/miniprogram/dev/component/editor.html
+ */
+export const Editor = createHostComponent<EditorProps>('editor');
+
+Editor.defaultProps = {
+  readOnly: false,
+  showImgSize: false,
+  showImgToolbar: false,
+  showImgResize: false,
+};

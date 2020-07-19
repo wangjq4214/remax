@@ -1,82 +1,58 @@
-import fs from 'fs';
 import path from 'path';
+import { Options, EntryInfo, Entries } from '@remax/types';
+import { slash } from '@remax/shared';
+import { searchJSFile } from './build/utils/paths';
 import API from './API';
-import { RemaxOptions, AppConfig, Entries } from 'remax-types';
-import readManifest from './readManifest';
-import { Context } from './types';
-import { output } from './build/utils/output';
+import getAppConfig from './build/utils/getAppConfig';
 
-export function searchFile(file: string, strict?: boolean) {
-  const exts = ['ts', 'tsx', 'js', 'jsx'];
+export function getPages(options: Options, api: API): EntryInfo[] {
+  const appConfig = getAppConfig(options, api);
+  const ROOT_DIR = path.join(options.cwd, options.rootDir);
+  const subPackages = appConfig.subPackages || appConfig.subpackages || [];
 
-  for (const e of exts) {
-    const extFile = file + '.' + e;
-    if (fs.existsSync(extFile)) {
-      return extFile;
-    }
+  if (!appConfig.pages || appConfig.pages.length === 0) {
+    throw new Error('app.config.js|ts 并未配置页面参数');
   }
 
-  if (strict) {
-    output(`\n🚨 [配置]: ${file} 不存在，请检查你的配置文件`, 'red');
-  }
-
-  return '';
-}
-
-export const getAppConfig = (options: RemaxOptions) => {
-  const appConfigPath: string = path.join(
-    options.cwd,
-    options.rootDir,
-    'app.config'
-  );
-
-  return readManifest(appConfigPath, API.adapter.name, true) as AppConfig;
-};
-
-// TODO: getEntries 处理 context 的逻辑要去掉
-export default function getEntries(
-  options: RemaxOptions,
-  context?: Context
-): Entries {
-  let pages: any = [];
-  let subpackages: any = [];
-
-  const appConfig = getAppConfig(options);
-
-  if (context) {
-    pages = context?.pages?.map(p => p.path) || [];
-    subpackages = context?.app?.subpackages || context?.app?.subPackages || [];
-  }
-
-  const entries: Entries = {
-    app: searchFile(path.join(options.cwd, options.rootDir, 'app'), true),
-    pages: [],
-    images: [],
-  };
-
-  entries.pages = pages.reduce(
-    (ret: Array<{ path: string; file: string }>, page: string) => {
-      return [
-        ...ret,
-        searchFile(path.join(options.cwd, options.rootDir, page), true),
-      ].filter(page => !!page);
-    },
+  // 页面
+  const pages: Array<{ name: string; filename: string }> = appConfig.pages.reduce(
+    (ret: EntryInfo[], page: string) => [
+      ...ret,
+      {
+        name: page,
+        filename: slash(searchJSFile(path.join(ROOT_DIR, page))),
+      },
+    ],
     []
   );
 
-  subpackages.forEach((pack: { pages: string[]; root: string }) => {
-    entries.pages = entries.pages.concat(
-      pack.pages.reduce((ret: string[], page) => {
-        return [
+  // 分包页面
+  subPackages.forEach((pack: { pages: string[]; root: string }) => {
+    pages.push(
+      ...pack.pages.reduce(
+        (ret: EntryInfo[], page) => [
           ...ret,
-          searchFile(
-            path.join(options.cwd, options.rootDir, pack.root, page),
-            true
-          ),
-        ].filter(page => !!page);
-      }, [])
+          {
+            name: slash(path.join(pack.root, page)),
+            filename: slash(searchJSFile(path.join(ROOT_DIR, pack.root, page))),
+          },
+        ],
+        []
+      )
     );
   });
 
-  return API.getEntries(entries, appConfig, options);
+  return pages.filter(page => !!page.filename);
+}
+
+export default function getEntries(options: Options, api: API): Entries {
+  const entries: Entries = {
+    app: {
+      name: 'app',
+      filename: slash(searchJSFile(path.join(options.cwd, options.rootDir, 'app'))),
+    },
+    pages: getPages(options, api),
+  };
+
+  return entries;
 }

@@ -1,7 +1,8 @@
-import createHostComponent from '../../createHostComponent';
+import { createHostComponent } from '@remax/shared';
 import { BaseProps } from '../../types/component';
 
 export interface PickerProps extends BaseProps {
+  name?: string;
   /**
    * 1.0.0
    * 选择器类型
@@ -65,4 +66,16 @@ export interface PickerProps extends BaseProps {
   customItem?: string;
 }
 
-export default createHostComponent<PickerProps>('picker');
+/**
+ * https://developers.weixin.qq.com/miniprogram/dev/component/picker.html
+ */
+export const Picker = createHostComponent<PickerProps>('picker');
+
+Picker.defaultProps = {
+  mode: 'selector',
+  disabled: false,
+  // FIXME: value 的值与 mode 类型变化
+  // value: 0,
+  range: [],
+  fields: 'day',
+};

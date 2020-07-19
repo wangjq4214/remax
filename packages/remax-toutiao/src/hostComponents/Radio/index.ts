@@ -1,12 +1,19 @@
-import createHostComponent from '../../createHostComponent';
+import { createHostComponent } from '@remax/shared';
 
 import { BaseProps } from '../../types/component';
 
 export interface RadioProps extends BaseProps {
+  name?: string;
   value?: string;
   checked?: boolean;
   disabled?: boolean;
   color?: string;
 }
 
-export default createHostComponent<RadioProps>('radio');
+export const Radio = createHostComponent<RadioProps>('radio');
+
+Radio.defaultProps = {
+  checked: false,
+  disabled: false,
+  color: '#F85959',
+};

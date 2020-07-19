@@ -1,6 +1,7 @@
 export const alias = {
   id: 'id',
   style: 'style',
+  animation: 'animation',
   className: 'class',
   latitude: 'latitude',
   longitude: 'longitude',
@@ -9,7 +10,7 @@ export const alias = {
   polyline: 'polyline',
   circles: 'circles',
   controls: 'controls',
-  polygon: 'polygon',
+  polygons: 'polygons',
   showLocation: 'show-location',
   includePoints: 'include-points',
   includePadding: 'include-padding',
@@ -42,7 +43,6 @@ export const alias = {
   onRegionChange: 'bindregionchange',
   onPoiTap: 'bindpoitap',
   onPoiClick: 'bindpoitap',
-  animation: 'animation',
 };
 
 export const props = Object.values(alias);

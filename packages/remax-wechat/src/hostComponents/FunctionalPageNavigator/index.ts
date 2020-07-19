@@ -1,4 +1,4 @@
-import createHostComponent from '../../createHostComponent';
+import { createHostComponent } from '@remax/shared';
 import { BaseProps } from '../../types/component';
 
 export interface FunctionalPageNavigatorProps extends BaseProps {
@@ -15,7 +15,11 @@ export interface FunctionalPageNavigatorProps extends BaseProps {
   /** 因用户操作从功能页返回时触发 2.4.1  */
   onCancel?: (event: any) => any;
 }
+/**
+ * @see https://developers.weixin.qq.com/miniprogram/dev/component/functional-page-navigator.html
+ */
+export const FunctionalPageNavigator = createHostComponent<FunctionalPageNavigatorProps>('functional-page-navigator');
 
-export default createHostComponent<FunctionalPageNavigatorProps>(
-  'functional-page-navigator'
-);
+FunctionalPageNavigator.defaultProps = {
+  version: 'release',
+};

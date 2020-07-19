@@ -1,4 +1,4 @@
-import createHostComponent from '../../createHostComponent';
+import { createHostComponent } from '@remax/shared';
 import { BaseProps } from '../../types/component';
 
 export interface WebViewProps extends BaseProps {
@@ -12,4 +12,7 @@ export interface WebViewProps extends BaseProps {
   onError?: (event: any) => any;
 }
 
-export default createHostComponent<WebViewProps>('web-view');
+/**
+ * https://developers.weixin.qq.com/miniprogram/dev/component/web-view.html
+ */
+export const WebView = createHostComponent<WebViewProps>('web-view');

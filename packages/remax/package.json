@@ -1,9 +1,11 @@
 {
   "name": "remax",
-  "version": "1.11.3",
+  "version": "2.7.3",
   "description": "Remax 是一个全新的基于 React 的小程序开发框架",
-  "main": "cjs/index.js",
-  "module": "esm/index.js",
+  "main": "index.js",
+  "bin": {
+    "remax": "./bin/remax"
+  },
   "keywords": [
     "react",
     "miniapp",
@@ -19,41 +21,17 @@
     "url": "git+https://github.com/remaxjs/remax.git"
   },
   "homepage": "https://remaxjs.org",
-  "scripts": {
-    "clean": "rm -rf esm cjs",
-    "watch": "concurrently \"npm:watch:*\"",
-    "watch:esm": "npm run build:esm -- -w",
-    "watch:cjs": "npm run build:cjs -- -w",
-    "prebuild": "npm run clean",
-    "build": "npm run build:esm && npm run build:cjs",
-    "build:esm": "tsc",
-    "build:cjs": "tsc --module CommonJS --outDir cjs",
-    "test": "jest",
-    "test:debug": "npx --node-arg=--inspect-brk jest -i"
-  },
   "dependencies": {
-    "lodash.kebabcase": "^4.1.1",
-    "react-reconciler": "0.24.0",
-    "remax-alipay": "^1.11.3",
-    "remax-toutiao": "^1.11.3",
-    "remax-wechat": "^1.11.3",
-    "remax.macro": "^1.11.3",
-    "scheduler": "0.18.0"
+    "@remax/ali": "2.7.3",
+    "@remax/cli": "2.7.3",
+    "@remax/macro": "2.7.3",
+    "@remax/one": "2.7.3",
+    "@remax/runtime": "2.7.3",
+    "@remax/toutiao": "2.7.3",
+    "@remax/web": "2.7.3",
+    "@remax/wechat": "2.7.3",
+    "mini-types": "^0.1.1",
+    "miniprogram-api-typings": "^2.10.4"
   },
-  "devDependencies": {
-    "@types/jest": "^24.0.15",
-    "@types/lodash.kebabcase": "^4.1.6",
-    "@types/node": "^13.1.6",
-    "@types/react": "^16.8.22",
-    "@types/react-reconciler": "^0.18.0",
-    "@types/react-test-renderer": "^16.9.0",
-    "concurrently": "^5.0.0",
-    "jest": "^24.8.0",
-    "object-path-immutable": "^4.0.2",
-    "react": "^16.8.6",
-    "react-test-renderer": "^16.9.0",
-    "ts-jest": "^24.0.2",
-    "typescript": "^3.7.3"
-  },
-  "gitHead": "28ef4f50ef3c134c4e661d786ebea4d7c4ea89ed"
+  "gitHead": "06dcaa3df31f6bde22b6d07a979c361dc137351f"
 }

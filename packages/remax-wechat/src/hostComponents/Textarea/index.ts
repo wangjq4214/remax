@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { BaseProps } from '../../types/component';
-import createHostComponent from '../../createHostComponent';
+import { createHostComponent } from '@remax/shared';
 
 export interface TextareaProps extends BaseProps {
   name?: string;
   value: any;
   placeholder?: string;
   placeholderStyle?: React.CSSProperties;
-  placeholderClass?: string;
+  placeholderClassName?: string;
   disabled?: boolean;
   /** 最大输入长度，设置为 -1 的时候不限制最大长度 */
   maxlength?: number;
@@ -30,6 +30,8 @@ export interface TextareaProps extends BaseProps {
   adjustPosition?: boolean;
   /** focus时，点击页面的时候不收起键盘 */
   holdKeyboard?: boolean;
+  /** 是否去掉 iOS 下的默认内边距 2.10.0 */
+  disableDefaultPadding?: boolean;
 
   onInput?: (...params: any) => void;
   onFocus?: (...params: any) => void;
@@ -37,14 +39,25 @@ export interface TextareaProps extends BaseProps {
   onConfirm?: (event: any) => any;
   onKeyboardHeightChange?: (event: any) => any;
 }
-
-const Textarea = createHostComponent<TextareaProps>('textarea');
+/**
+ * https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html
+ */
+export const Textarea = createHostComponent<TextareaProps>('textarea');
 
 Textarea.defaultProps = {
-  maxlength: -1,
-  selectionEnd: 999,
-  selectionStart: 999,
+  placeholderClassName: 'textarea-placeholder',
+  disabled: false,
+  maxlength: 140,
+  autoFocus: false,
+  focus: false,
+  autoHeight: false,
   fixed: false,
+  cursorSpacing: 0,
+  cursor: -1,
+  showConfirmBar: true,
+  selectionStart: -1,
+  selectionEnd: -1,
+  adjustPosition: true,
+  holdKeyboard: false,
+  disableDefaultPadding: false,
 };
-
-export default Textarea;

@@ -1,7 +1,8 @@
-import createHostComponent from '../../createHostComponent';
+import { createHostComponent } from '@remax/shared';
 import { BaseProps } from '../../types/component';
 
 export interface CheckboxProps extends BaseProps {
+  name?: string;
   /** checkbox标识，选中时触发checkbox-group的 change 事件，并携带 checkbox 的 value 1.0.0  */
   value?: string;
   /** 是否禁用 1.0.0  */
@@ -12,4 +13,13 @@ export interface CheckboxProps extends BaseProps {
   color?: string;
 }
 
-export default createHostComponent<CheckboxProps>('checkbox');
+/**
+ * @see https://developers.weixin.qq.com/miniprogram/dev/component/checkbox.html
+ */
+export const Checkbox = createHostComponent<CheckboxProps>('checkbox');
+
+Checkbox.defaultProps = {
+  disabled: false,
+  checked: false,
+  color: '#09bb07',
+};

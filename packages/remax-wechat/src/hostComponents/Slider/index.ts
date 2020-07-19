@@ -1,12 +1,29 @@
 import * as React from 'react';
-import createHostComponent from '../../createHostComponent';
+import { createHostComponent } from '@remax/shared';
 import { BaseProps } from '../../types/component';
 
-const Slider: React.ComponentType<SliderProps> = createHostComponent<
-  SliderProps
->('slider');
+/**
+ * https://developers.weixin.qq.com/miniprogram/dev/component/slider.html
+ */
+export const Slider: React.ComponentType<SliderProps> = createHostComponent<SliderProps>('slider');
+
+Slider.defaultProps = {
+  min: 0,
+  max: 100,
+  step: 1,
+  disabled: false,
+  value: 0,
+  color: '#e9e9e9',
+  selectedColor: '#1aad19',
+  activeColor: '#1aad19',
+  backgroundColor: '#e9e9e9',
+  blockSize: 28,
+  blockColor: '#ffffff',
+  showValue: false,
+};
 
 export interface SliderProps extends BaseProps {
+  name?: string;
   /** (default: 0) 最小值 1.0.0 */
   min?: number;
   /** (default: 100) 最大值 1.0.0 */
@@ -17,6 +34,10 @@ export interface SliderProps extends BaseProps {
   disabled?: boolean;
   /** (default: 0) 当前取值 1.0.0 */
   value?: number;
+  /** 背景条的颜色（请使用 backgroundColor） 1.0.0 */
+  color?: string;
+  /** 已选择的颜色（请使用 activeColor） 1.0.0 */
+  selectedColor?: string;
   /** (default: #1aad19) 已选择的颜色 1.0.0 */
   activeColor?: string;
   /** (default: #e9e9e9) 背景条的颜色 1.0.0 */
@@ -32,11 +53,3 @@ export interface SliderProps extends BaseProps {
   /** 拖动过程中触发的事件，event.detail = {value} 1.7.0 */
   onChanging?: (event: any) => any;
 }
-
-Slider.defaultProps = {
-  blockSize: 28,
-  step: 1,
-  max: 100,
-};
-
-export default Slider;

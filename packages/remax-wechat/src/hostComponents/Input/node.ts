@@ -7,6 +7,7 @@ export const alias = {
   maxlength: 'maxlength',
   value: 'value',
   style: 'style',
+  animation: 'animation',
   password: 'password',
   type: 'type',
   confirmType: 'confirm-type',
@@ -17,6 +18,7 @@ export const alias = {
   adjustPosition: 'adjust-position',
   placeholder: 'placeholder',
   placeholderStyle: 'placeholder-style',
+  placeholderClass: 'placeholder-class',
   placeholderClassName: 'placeholder-class',
   disabled: 'disabled',
   cursorSpacing: 'cursor-spacing',
@@ -27,7 +29,6 @@ export const alias = {
   onBlur: 'bindblur',
   onConfirm: 'bindconfirm',
   onKeyboardHeightChange: 'bindkeyboardheightchange',
-  animation: 'animation',
 };
 
 export const props = Object.values(alias);
